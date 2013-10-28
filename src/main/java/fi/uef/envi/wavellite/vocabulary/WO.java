@@ -33,6 +33,9 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
 	
+	/** http://envi.uef.fi/wavellite#MeasurementResult */
+	public static final String MeasurementResult = _("MeasurementResult");
+	
 	/** http://envi.uef.fi/wavellite#DoubleMeasurementValue */
 	public static final String DoubleMeasurementValue = _("DoubleMeasurementValue");
 	
