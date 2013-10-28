@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://vistology.com/ont/2008/STO/STO.owl#"
+  xml:base="http://vistology.com/ont/2008/STO/STO.owl">
+  <owl:Ontology rdf:about="">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   
+    Situation Theory Ontology by VIStology, Inc. 
+	
+	Copyright (c) 2013 VIStology, Inc., http://www.vistology.com/, Framingham, MA, USA
+
+    This file contains an OWL representation of information contained in the 
+    VIStology Knowledge Base. The content of this OWL file is licensed under the 
+    Creative Commons Attribution NonCommercial 3.0 Unported license whose text can 
+    be found at http://creativecommons.org/licenses/by-nc/3.0/legalcode. The content 
+    of this RDF/OWL file, including the VIStology Knowledgebase content it represents, 
+    constitutes the "Work" referred to in the Creative Commons license. The terms of 
+    this license equally apply to, without limitation, renamings and other logically 
+    equivalent reformulations of the content of this OWL file (or portions thereof) 
+    in any natural or formal language, as well as to derivations of this content or 
+    inclusion of it in other ontologies.
+   
+   </rdfs:comment>
+  </owl:Ontology>
+  
+  <owl:Class rdf:ID="TYP">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Types of classes in situation semantics framework.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="SIT">
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Situation types.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="ATTR">
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute types.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="IND">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individual types.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TYP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="BEH">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TYP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PROP">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proposition types.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TYP"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="RUL">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="VAL">
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value types.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="INF">
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DIM">
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensionality types.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RELn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#TYP"/>
+  </owl:Class>  
+
+  <TYP rdf:ID="Object"/>
+  
+  <SIT rdf:ID="Situation">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </SIT>
+  
+  <SIT rdf:ID="ResourceSituation">
+    <rdfs:subClassOf rdf:resource="#Situation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource situations are those that exist and to which utterance situations refer.</rdfs:comment>
+  </SIT>
+
+  <SIT rdf:ID="FocalSituation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aka described situation. This is the situation of interest at a given time.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Situation"/>
+  </SIT>      
+      
+  <SIT rdf:ID="UtteranceSituation">
+    <rdfs:subClassOf rdf:resource="#Situation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utterance (goal, query, assertion).</rdfs:comment>
+  </SIT>
+
+  <SIT rdf:ID="Event">
+    <rdfs:subClassOf rdf:resource="#Situation"/>
+  </SIT>
+      
+  <RELn rdf:ID="Relation">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </RELn>
+  
+  <owl:Class rdf:ID="PropertyRelation">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <RELn rdf:about="#Relation"/>
+          <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+
+  <PROP rdf:ID="Proposition">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </PROP>
+  
+  <IND rdf:ID="Individual">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </IND>
+
+  <IND rdf:ID="Agent">
+    <rdfs:subClassOf rdf:resource="#Individual"/>
+  </IND>
+
+  <IND rdf:ID="RelevantIndividual">
+    <rdfs:subClassOf rdf:resource="#Individual"/>
+  </IND>
+
+  <INF rdf:ID="ElementaryInfon">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </INF>  
+
+  <ATTR rdf:ID="Attribute">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </ATTR>
+
+  <ATTR rdf:ID="Velocity">
+    <rdfs:subClassOf rdf:resource="#Attribute"/>
+  </ATTR>
+
+  <ATTR rdf:ID="Location">
+    <rdfs:subClassOf rdf:resource="#Attribute"/>
+  </ATTR>
+
+  <ATTR rdf:ID="Sentence">
+    <rdfs:subClassOf rdf:resource="#Attribute"/>
+  </ATTR>
+
+  <ATTR rdf:ID="Time">
+    <rdfs:subClassOf rdf:resource="#Attribute"/>
+  </ATTR>
+  
+  <VAL rdf:ID="Value">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </VAL>
+
+  <VAL rdf:ID="Polarity">
+    <rdfs:subClassOf rdf:resource="#Value"/>
+  </VAL>
+
+  <DIM rdf:ID="Dimensionality">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </DIM>
+      
+  <RUL rdf:ID="Rule">
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </RUL>
+      
+  <owl:Class rdf:ID="Utterance">
+    <rdfs:subClassOf rdf:resource="#Individual"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="anchor3Inverse">
+    <rdfs:domain rdf:resource="#Object"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="anchor3"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#ElementaryInfon"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="referringSituation">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="resourceSituation"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Situation"/>
+    <rdfs:domain rdf:resource="#Situation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="relevantIndividual">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="#Situation"/>        
+          <rdf:Description rdf:about="#SIT"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Individual"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="utteranceSituation">
+    <rdfs:domain rdf:resource="#Situation"/>
+    <rdfs:range rdf:resource="#Situation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="focalSituation"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="hasAttribute">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <IND rdf:about="#Individual"/>
+          <SIT rdf:about="#Situation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Attribute"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="supportedInfon">
+    <rdfs:range rdf:resource="#ElementaryInfon"/>
+    <rdfs:domain rdf:resource="#Situation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="supportedBySituation"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="#supportedBySituation">
+    <owl:inverseOf rdf:resource="#supportedInfon"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="focalRelation">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="#Situation"/>        
+          <rdf:Description rdf:about="#SIT"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>  
+    <rdfs:range rdf:resource="#PropertyRelation"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="relevantRelation"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="#resourceSituation">
+    <rdfs:domain rdf:resource="#Situation"/>
+    <rdfs:range rdf:resource="#Situation"/>
+    <owl:inverseOf rdf:resource="#referringSituation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="#focalSituation">
+    <rdfs:range rdf:resource="#Situation"/>
+    <rdfs:domain rdf:resource="#Situation"/>
+    <owl:inverseOf rdf:resource="#utteranceSituation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="utteredBy">
+    <rdfs:domain rdf:resource="#Utterance"/>
+    <rdfs:range rdf:resource="#Agent"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="anchor2Inverse">
+    <rdfs:range rdf:resource="#ElementaryInfon"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="anchor2"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#Object"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="relevantSituation">
+    <rdfs:range rdf:resource="#ResourceSituation"/>
+    <rdfs:domain rdf:resource="#FocalSituation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="focalIndividual">
+    <rdfs:subPropertyOf rdf:resource="#relevantIndividual"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="#Situation"/>        
+          <rdf:Description rdf:about="#SIT"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="#relevantRelation">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="#Situation"/>        
+          <rdf:Description rdf:about="#SIT"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#PropertyRelation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="involves">
+    <rdfs:domain rdf:resource="#Situation"/>  
+    <rdfs:range rdf:resource="#Situation"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="utterance">
+    <rdfs:domain rdf:resource="#UtteranceSituation"/>
+    <rdfs:range rdf:resource="#Utterance"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="query">
+    <rdfs:domain rdf:resource="#Situation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="anchor1Inverse">
+    <rdfs:domain rdf:resource="#Object"/>
+    <rdfs:range rdf:resource="#ElementaryInfon"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="anchor1"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:ID="hasAttributeValue">
+    <rdfs:domain rdf:resource="#Attribute"/>
+    <rdfs:range rdf:resource="#Value"/>
+  </owl:ObjectProperty>
+  
+  <owl:DatatypeProperty rdf:ID="certainty">
+    <rdfs:domain rdf:resource="#Value"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:ID="attributeValue">
+    <rdfs:domain rdf:resource="#Value"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <owl:FunctionalProperty rdf:about="#anchor2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ElementaryInfon"/>
+    <rdfs:range rdf:resource="#Object"/>
+    <owl:inverseOf rdf:resource="#anchor2Inverse"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:ID="par2Type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Relation"/>
+    <rdfs:range rdf:resource="#TYP"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:ID="par1Type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Relation"/>
+    <rdfs:range rdf:resource="#TYP"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:about="#anchor3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ElementaryInfon"/>
+    <rdfs:range rdf:resource="#Object"/>
+    <owl:inverseOf rdf:resource="#anchor3Inverse"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:ID="polarity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ElementaryInfon"/>
+    <rdfs:range rdf:resource="#Polarity"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:ID="relation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ElementaryInfon"/>
+    <rdfs:range rdf:resource="#PropertyRelation"/>
+  </owl:FunctionalProperty>
+  
+  <owl:FunctionalProperty rdf:ID="impliedByRule">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#PropertyRelation"/>
+    <rdfs:range rdf:resource="#Rule"/>
+  </owl:FunctionalProperty>
+
+  <owl:FunctionalProperty rdf:about="#anchor1">
+    <rdfs:range rdf:resource="#Object"/>
+    <rdfs:domain rdf:resource="#ElementaryInfon"/>
+    <owl:inverseOf rdf:resource="#anchor1Inverse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+
+  <owl:FunctionalProperty rdf:ID="dimensionality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Attribute"/>
+    <rdfs:range rdf:resource="#Dimensionality"/>
+  </owl:FunctionalProperty>
+
+  <owl:FunctionalProperty rdf:ID="par3Type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>  
+    <rdfs:domain rdf:resource="#Relation"/>
+    <rdfs:range rdf:resource="#TYP"/>
+  </owl:FunctionalProperty>
+  
+  <Polarity rdf:ID="_0">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">false</rdfs:comment>
+    <attributeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</attributeValue>
+  </Polarity>
+
+  <Polarity rdf:ID="_1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</rdfs:comment>
+    <attributeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</attributeValue>
+  </Polarity>
+  
+  <Relation rdf:ID="location">
+    <par1Type rdf:resource="#Object"/>
+    <par2Type rdf:resource="#Location"/>
+  </Relation>
+
+  <Relation rdf:ID="velocity">
+    <par1Type rdf:resource="#Object"/>
+    <par2Type rdf:resource="#Velocity"/>
+  </Relation>
+  
+  <Dimensionality rdf:ID="m">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter</rdfs:comment>
+  </Dimensionality>
+
+  <Dimensionality rdf:ID="Str"/>
+
+  <Dimensionality rdf:ID="s">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">second</rdfs:comment>
+  </Dimensionality>
+  
+  <Dimensionality rdf:ID="mps">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meters per second</rdfs:comment>
+  </Dimensionality>
+
+</rdf:RDF>
