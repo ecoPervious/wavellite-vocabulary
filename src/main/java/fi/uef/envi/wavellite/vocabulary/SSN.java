@@ -5,6 +5,10 @@
 
 package fi.uef.envi.wavellite.vocabulary;
 
+import org.openrdf.model.URI;
+import org.openrdf.model.ValueFactory;
+import org.openrdf.model.impl.ValueFactoryImpl;
+
 /**
  * <p>
  * Title: SSN
@@ -81,6 +85,17 @@ public class SSN {
 	/** http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation */
 	public static final String qualityOfObservation = _("qualityOfObservation");
 
+	public static class asURI {
+		
+		private static final ValueFactory f = ValueFactoryImpl.getInstance();
+		
+		public static final URI observedBy = _uri(SSN.observedBy);
+		
+		private static URI _uri(String s) {
+			return f.createURI(s);
+		}
+	}
+	
 	private static String _(String fragment) {
 		return ns + "#" + fragment;
 	}
