@@ -76,11 +76,52 @@
     
 
 
+    <!-- http://envi.uef.fi/wavellite#Feature -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite#Feature">
+        <rdfs:label xml:lang="en">Feature (Wavellite)</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+        <rdfs:comment xml:lang="en">A WO Feature is an equivalent class to SSN FeatureOfInterest. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite feature may be a representation for a monitored phenomenon. In contrast, at the situation layer, a Wavellite feature may be an object relevant to a situation, for instance we may state that a phenomenon is observed in an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite#MeasurementContext -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite#MeasurementContext">
+        <rdfs:label xml:lang="en">Measurement context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite#MeasurementResult -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite#MeasurementResult">
+        <rdfs:label xml:lang="en">Measurement result</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+    </owl:Class>
+    
+
+
     <!-- http://envi.uef.fi/wavellite#MeasurementValue -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite#MeasurementValue">
         <rdfs:label xml:lang="en">Measurement value</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite#Property -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite#Property">
+        <rdfs:label xml:lang="en">Property (Wavellite)</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
     </owl:Class>
     
 
@@ -92,7 +133,36 @@
         <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+        <rdfs:comment xml:lang="en">A WO Sensor is an equivalent class to SSN Sensor. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite sensor may be a representation for a sensing device that observes SSN observations. In contrast, at the situation layer, a Wavellite sensor may be an object relevant to a situation, for instance we may state that the phenomenon of an event is observed by a sensing device.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite#SensorObservation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite#SensorObservation">
+        <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
     
 
 

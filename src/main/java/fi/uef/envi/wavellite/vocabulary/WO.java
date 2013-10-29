@@ -33,6 +33,9 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
 	
+	/** http://envi.uef.fi/wavellite#MeasurementContext */
+	public static final String MeasurementContext = _("MeasurementContext");
+	
 	/** http://envi.uef.fi/wavellite#MeasurementResult */
 	public static final String MeasurementResult = _("MeasurementResult");
 	
@@ -47,6 +50,9 @@ public class WO {
 	
 	/** http://envi.uef.fi/wavellite#Property */
 	public static final String Property = _("Property");
+	
+	/** http://envi.uef.fi/wavellite#SensorObservation */
+	public static final String SensorObservation = _("SensorObservation");
 	
 	private static String _(String fragment) {
 		return ns + "#" + fragment;
