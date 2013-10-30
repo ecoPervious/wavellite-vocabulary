@@ -90,6 +90,7 @@ public class SSN {
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 		
 		public static final URI observedBy = _uri(SSN.observedBy);
+		public static final URI observedProperty = _uri(SSN.observedProperty);
 		
 		private static URI _uri(String s) {
 			return f.createURI(s);
