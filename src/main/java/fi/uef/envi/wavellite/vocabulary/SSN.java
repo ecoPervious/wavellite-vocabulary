@@ -91,6 +91,7 @@ public class SSN {
 		
 		public static final URI observedBy = _uri(SSN.observedBy);
 		public static final URI observedProperty = _uri(SSN.observedProperty);
+		public static final URI featureOfInterest = _uri(SSN.featureOfInterest);
 		
 		private static URI _uri(String s) {
 			return f.createURI(s);

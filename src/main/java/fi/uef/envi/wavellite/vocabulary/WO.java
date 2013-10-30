@@ -63,6 +63,8 @@ public class WO {
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
 		public static final URI Sensor = _uri(WO.Sensor);
+		public static final URI Property = _uri(WO.Property);
+		public static final URI Feature = _uri(WO.Feature);
 		public static final URI SensorObservation = _uri(WO.SensorObservation);
 		
 		private static URI _uri(String s) {
