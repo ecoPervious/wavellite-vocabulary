@@ -92,6 +92,9 @@ public class SSN {
 		public static final URI observedBy = _uri(SSN.observedBy);
 		public static final URI observedProperty = _uri(SSN.observedProperty);
 		public static final URI featureOfInterest = _uri(SSN.featureOfInterest);
+		public static final URI observationResult = _uri(SSN.observationResult);
+		public static final URI SensorOutput = _uri(SSN.SensorOutput);
+		public static final URI ObservationValue = _uri(SSN.ObservationValue);
 		
 		private static URI _uri(String s) {
 			return f.createURI(s);
