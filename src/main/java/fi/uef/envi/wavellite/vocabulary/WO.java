@@ -78,6 +78,7 @@ public class WO {
 		public static final URI Property = _uri(WO.Property);
 		public static final URI Feature = _uri(WO.Feature);
 		public static final URI SensorObservation = _uri(WO.SensorObservation);
+		public static final URI TemporalLocationDateTime = _uri(WO.TemporalLocationDateTime);
 		public static final URI DatasetObservation = _uri(WO.DatasetObservation);
 		public static final URI ComponentPropertyValueDouble = _uri(WO.ComponentPropertyValueDouble);
 		public static final URI ComponentPropertyValueTemporalLocation = _uri(WO.ComponentPropertyValueTemporalLocation);
