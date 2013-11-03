@@ -33,6 +33,9 @@ public class WO {
 
 	/** http://envi.uef.fi/wavellite#Entity */
 	public static final String Entity = _("Entity");
+	
+	/** http://envi.uef.fi/wavellite#TemporalLocationDateTime */
+	public static final String TemporalLocationDateTime = _("TemporalLocationDateTime");
 
 	/** http://envi.uef.fi/wavellite#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
