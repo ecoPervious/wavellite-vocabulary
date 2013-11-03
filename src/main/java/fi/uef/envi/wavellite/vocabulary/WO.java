@@ -43,8 +43,8 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#MeasurementResult */
 	public static final String MeasurementResult = _("MeasurementResult");
 
-	/** http://envi.uef.fi/wavellite#DoubleMeasurementValue */
-	public static final String DoubleMeasurementValue = _("DoubleMeasurementValue");
+	/** http://envi.uef.fi/wavellite#MeasurementValueDouble */
+	public static final String MeasurementValueDouble = _("MeasurementValueDouble");
 
 	/** http://envi.uef.fi/wavellite#Sensor */
 	public static final String Sensor = _("Sensor");
@@ -58,6 +58,12 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#SensorObservation */
 	public static final String SensorObservation = _("SensorObservation");
 
+	/** http://envi.uef.fi/wavellite#DatasetObservation */
+	public static final String DatasetObservation = _("DatasetObservation");
+
+	/** http://envi.uef.fi/wavellite#ComponentPropertyValueDouble */
+	public static final String ComponentPropertyValueDouble = _("ComponentPropertyValueDouble");
+
 	public static class asURI {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
@@ -66,7 +72,9 @@ public class WO {
 		public static final URI Property = _uri(WO.Property);
 		public static final URI Feature = _uri(WO.Feature);
 		public static final URI SensorObservation = _uri(WO.SensorObservation);
-		
+		public static final URI DatasetObservation = _uri(WO.DatasetObservation);
+		public static final URI ComponentPropertyValueDouble = _uri(WO.ComponentPropertyValueDouble);
+
 		private static URI _uri(String s) {
 			return f.createURI(s);
 		}
