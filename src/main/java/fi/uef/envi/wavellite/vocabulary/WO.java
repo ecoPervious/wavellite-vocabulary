@@ -64,6 +64,9 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#ComponentPropertyValueDouble */
 	public static final String ComponentPropertyValueDouble = _("ComponentPropertyValueDouble");
 
+	/** http://envi.uef.fi/wavellite#ComponentPropertyValueTemporalLocation */
+	public static final String ComponentPropertyValueTemporalLocation = _("ComponentPropertyValueTemporalLocation");
+
 	public static class asURI {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
@@ -74,6 +77,7 @@ public class WO {
 		public static final URI SensorObservation = _uri(WO.SensorObservation);
 		public static final URI DatasetObservation = _uri(WO.DatasetObservation);
 		public static final URI ComponentPropertyValueDouble = _uri(WO.ComponentPropertyValueDouble);
+		public static final URI ComponentPropertyValueTemporalLocation = _uri(WO.ComponentPropertyValueTemporalLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
