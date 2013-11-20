@@ -67,6 +67,9 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#ComponentPropertyValueDouble */
 	public static final String ComponentPropertyValueDouble = _("ComponentPropertyValueDouble");
 
+	/** http://envi.uef.fi/wavellite#ComponentPropertyValueInteger */
+	public static final String ComponentPropertyValueInteger = _("ComponentPropertyValueInteger");
+
 	/** http://envi.uef.fi/wavellite#ComponentPropertyValueTemporalLocation */
 	public static final String ComponentPropertyValueTemporalLocation = _("ComponentPropertyValueTemporalLocation");
 
@@ -87,6 +90,7 @@ public class WO {
 		public static final URI TemporalLocationDateTime = _uri(WO.TemporalLocationDateTime);
 		public static final URI DatasetObservation = _uri(WO.DatasetObservation);
 		public static final URI ComponentPropertyValueDouble = _uri(WO.ComponentPropertyValueDouble);
+		public static final URI ComponentPropertyValueInteger = _uri(WO.ComponentPropertyValueInteger);
 		public static final URI ComponentPropertyValueTemporalLocation = _uri(WO.ComponentPropertyValueTemporalLocation);
 		public static final URI AttributeValueDouble = _uri(WO.AttributeValueDouble);
 		public static final URI AttributeValueTemporalLocation = _uri(WO.AttributeValueTemporalLocation);
