@@ -82,6 +82,9 @@ public class WO {
 	/** http://envi.uef.fi/wavellite#AttributeValueTemporalLocation */
 	public static final String AttributeValueTemporalLocation = _("AttributeValueTemporalLocation");
 	
+	/** http://envi.uef.fi/wavellite#AttributeValueString */
+	public static final String AttributeValueString = _("AttributeValueString");
+	
 	public static class asURI {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
@@ -98,6 +101,7 @@ public class WO {
 		public static final URI ComponentPropertyValueTemporalLocation = _uri(WO.ComponentPropertyValueTemporalLocation);
 		public static final URI AttributeValueDouble = _uri(WO.AttributeValueDouble);
 		public static final URI AttributeValueTemporalLocation = _uri(WO.AttributeValueTemporalLocation);
+		public static final URI AttributeValueString = _uri(WO.AttributeValueString);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
