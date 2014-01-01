@@ -16,7 +16,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wto">
-        <rdfs:comment>The Wavellite Task Ontology (WTO) is an ontology for the Wavellite entities relevant to the task of situational knowledge acquisition and representation from sensor data for environmental phenomena.</rdfs:comment>
+        <rdfs:comment>The Wavellite task can be described as the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The WTO describes the Wavellite entities that are relevant to this task.</rdfs:comment>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
         <owl:imports rdf:resource="http://vistology.com/ont/2008/STO/STO.owl"/>

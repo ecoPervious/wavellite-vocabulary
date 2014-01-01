@@ -14,7 +14,10 @@ import org.openrdf.model.impl.ValueFactoryImpl;
  * Title: WTO
  * </p>
  * <p>
- * Description:
+ * Description: The Wavellite task can be described as the acquisition and
+ * representation of situational knowledge from sensor data for environmental
+ * phenomena. The WTO describes the Wavellite entities that are relevant to this
+ * task.
  * </p>
  * <p>
  * Project: Wavellite Task Ontology
@@ -33,7 +36,7 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#Entity */
 	public static final String Entity = _("Entity");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime */
 	public static final String TemporalLocationDateTime = _("TemporalLocationDateTime");
 
@@ -63,13 +66,13 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#DatasetObservation */
 	public static final String DatasetObservation = _("DatasetObservation");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#Component */
 	public static final String Component = _("Component");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyDimension */
 	public static final String ComponentPropertyDimension = _("ComponentPropertyDimension");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyMeasure */
 	public static final String ComponentPropertyMeasure = _("ComponentPropertyMeasure");
 
@@ -84,16 +87,16 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri */
 	public static final String ComponentPropertyValueUri = _("ComponentPropertyValueUri");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueDouble */
 	public static final String AttributeValueDouble = _("AttributeValueDouble");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueTemporalLocation */
 	public static final String AttributeValueTemporalLocation = _("AttributeValueTemporalLocation");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueString */
 	public static final String AttributeValueString = _("AttributeValueString");
-	
+
 	public static class asURI {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
