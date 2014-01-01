@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/wto#"
+     xml:base="http://envi.uef.fi/wavellite/wto"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wto">
+        <rdfs:comment>The Wavellite Task Ontology (WTO) is an ontology for the Wavellite entities relevant to the task of situational knowledge acquisition and representation from sensor data for environmental phenomena.</rdfs:comment>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
+        <owl:imports rdf:resource="http://vistology.com/ont/2008/STO/STO.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#MeasurementValueDouble -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementValueDouble">
+        <rdfs:label xml:lang="en">Double measurement value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Entity -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Entity">
+        <rdfs:label xml:lang="en">Entity (Wavellite)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+        <rdfs:comment xml:lang="en">Anything in the domain of Wavellite is an entity. Wavellite entities have an identifier and an optional type.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Feature -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Feature">
+        <rdfs:label xml:lang="en">Feature (Wavellite)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+        <rdfs:comment xml:lang="en">A WTO Feature is an subclass class of SSN FeatureOfInterest. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite feature may be a representation for a monitored phenomenon. In contrast, at the situation layer, a Wavellite feature may be an object relevant to a situation, for instance we may state that a phenomenon is observed in an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#MeasurementContext -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementContext">
+        <rdfs:label xml:lang="en">Measurement context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#MeasurementResult -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementResult">
+        <rdfs:label xml:lang="en">Measurement result</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#MeasurementValue -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementValue">
+        <rdfs:label xml:lang="en">Measurement value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Property -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Property">
+        <rdfs:label xml:lang="en">Property (Wavellite)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Sensor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Sensor">
+        <rdfs:label xml:lang="en">Sensor (Wavellite)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+        <rdfs:comment xml:lang="en">A WTO Sensor is a subclass of SSN Sensor. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite sensor may be a representation for a sensing device that observes SSN observations. In contrast, at the situation layer, a Wavellite sensor may be an object relevant to a situation, for instance we may state that the phenomenon of an event is observed by a sensing device.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SensorObservation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorObservation">
+        <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
