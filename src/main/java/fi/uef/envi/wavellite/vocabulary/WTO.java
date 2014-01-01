@@ -37,8 +37,14 @@ public class WTO {
 	/** http://envi.uef.fi/wavellite/wto#Entity */
 	public static final String Entity = _("Entity");
 
+	/** http://envi.uef.fi/wavellite/wto#TemporalLocation */
+	public static final String TemporalLocation = _("TemporalLocation");
+	
 	/** http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime */
 	public static final String TemporalLocationDateTime = _("TemporalLocationDateTime");
+
+	/** http://envi.uef.fi/wavellite/wto#Interval */
+	public static final String TemporalLocationInterval = _("TemporalLocationInterval");
 
 	/** http://envi.uef.fi/wavellite/wto#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
@@ -105,7 +111,9 @@ public class WTO {
 		public static final URI Property = _uri(WTO.Property);
 		public static final URI Feature = _uri(WTO.Feature);
 		public static final URI SensorObservation = _uri(WTO.SensorObservation);
+		public static final URI TemporalLocation = _uri(WTO.TemporalLocation);
 		public static final URI TemporalLocationDateTime = _uri(WTO.TemporalLocationDateTime);
+		public static final URI TemporalLocationInterval = _uri(WTO.TemporalLocationInterval);
 		public static final URI DatasetObservation = _uri(WTO.DatasetObservation);
 		public static final URI Component = _uri(WTO.Component);
 		public static final URI ComponentPropertyDomain = _uri(WTO.ComponentPropertyDimension);

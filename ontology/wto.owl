@@ -163,7 +163,7 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocation">
         <rdfs:label xml:lang="en">Temporal location</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Time"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Value"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
     </owl:Class>
