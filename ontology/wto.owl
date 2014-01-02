@@ -21,14 +21,15 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wto">
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
-        <terms:created>2014-01-01</terms:created>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
+        <terms:created>2014-01-01</terms:created>
         <dc:identifier>http://envi.uef.fi/wavellite/wto</dc:identifier>
         <rdfs:comment>The Wavellite task can be described as the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The WTO describes the Wavellite entities that are relevant to this task.</rdfs:comment>
-        <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
         <owl:imports rdf:resource="http://vistology.com/ont/2008/STO/STO.owl"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
     </owl:Ontology>
     
@@ -158,6 +159,38 @@
     
 
 
+    <!-- http://envi.uef.fi/wavellite/wto#SpatialLocation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialLocation">
+        <rdfs:label xml:lang="en">Spatial location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Value"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SpatialLocationQualitative -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialLocationQualitative">
+        <rdfs:label xml:lang="en">Qualitative spatial location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SpatialLocationQuantitative -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialLocationQuantitative">
+        <rdfs:label xml:lang="en">Quantitative spatial location
+</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
+    </owl:Class>
+    
+
+
     <!-- http://envi.uef.fi/wavellite/wto#TemporalLocation -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocation">
@@ -173,7 +206,7 @@
     <!-- http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime">
-        <rdfs:label xml:lang="en">Date time (temporal location)</rdfs:label>
+        <rdfs:label xml:lang="en">Date time temporal location</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
     </owl:Class>
@@ -183,7 +216,7 @@
     <!-- http://envi.uef.fi/wavellite/wto#TemporalLocationInterval -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocationInterval">
-        <rdfs:label xml:lang="en">Interval (temporal location)</rdfs:label>
+        <rdfs:label xml:lang="en">Interval temporal location</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
     </owl:Class>

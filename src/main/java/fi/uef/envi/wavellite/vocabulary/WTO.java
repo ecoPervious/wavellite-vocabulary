@@ -39,12 +39,21 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#TemporalLocation */
 	public static final String TemporalLocation = _("TemporalLocation");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime */
 	public static final String TemporalLocationDateTime = _("TemporalLocationDateTime");
 
-	/** http://envi.uef.fi/wavellite/wto#Interval */
+	/** http://envi.uef.fi/wavellite/wto#TemporalLocationInterval */
 	public static final String TemporalLocationInterval = _("TemporalLocationInterval");
+
+	/** http://envi.uef.fi/wavellite/wto#SpatialLocation */
+	public static final String SpatialLocation = _("SpatialLocation");
+
+	/** http://envi.uef.fi/wavellite/wto#SpatialLocationQualitative */
+	public static final String SpatialLocationQualitative = _("SpatialLocationQualitative");
+
+	/** http://envi.uef.fi/wavellite/wto#SpatialLocationQuantitative */
+	public static final String SpatialLocationQuantitative = _("SpatialLocationQuantitative");
 
 	/** http://envi.uef.fi/wavellite/wto#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
@@ -87,7 +96,7 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger */
 	public static final String ComponentPropertyValueInteger = _("ComponentPropertyValueInteger");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString */
 	public static final String ComponentPropertyValueString = _("ComponentPropertyValueString");
 
@@ -105,10 +114,10 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueString */
 	public static final String AttributeValueString = _("AttributeValueString");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueUri */
 	public static final String AttributeValueUri = _("AttributeValueUri");
-	
+
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueInteger */
 	public static final String AttributeValueInteger = _("AttributeValueInteger");
 
@@ -123,6 +132,9 @@ public class WTO {
 		public static final URI TemporalLocation = _uri(WTO.TemporalLocation);
 		public static final URI TemporalLocationDateTime = _uri(WTO.TemporalLocationDateTime);
 		public static final URI TemporalLocationInterval = _uri(WTO.TemporalLocationInterval);
+		public static final URI SpatialLocation = _uri(WTO.SpatialLocation);
+		public static final URI SpatialLocationQualitative = _uri(WTO.SpatialLocationQualitative);
+		public static final URI SpatialLocationQuantitative = _uri(WTO.SpatialLocationQuantitative);
 		public static final URI DatasetObservation = _uri(WTO.DatasetObservation);
 		public static final URI Component = _uri(WTO.Component);
 		public static final URI ComponentPropertyDomain = _uri(WTO.ComponentPropertyDimension);
