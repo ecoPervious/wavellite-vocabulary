@@ -87,6 +87,9 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger */
 	public static final String ComponentPropertyValueInteger = _("ComponentPropertyValueInteger");
+	
+	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString */
+	public static final String ComponentPropertyValueString = _("ComponentPropertyValueString");
 
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation */
 	public static final String ComponentPropertyValueTemporalLocation = _("ComponentPropertyValueTemporalLocation");
@@ -102,6 +105,12 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueString */
 	public static final String AttributeValueString = _("AttributeValueString");
+	
+	/** http://envi.uef.fi/wavellite/wto#AttributeValueUri */
+	public static final String AttributeValueUri = _("AttributeValueUri");
+	
+	/** http://envi.uef.fi/wavellite/wto#AttributeValueInteger */
+	public static final String AttributeValueInteger = _("AttributeValueInteger");
 
 	public static class asURI {
 
@@ -120,11 +129,14 @@ public class WTO {
 		public static final URI ComponentPropertyRange = _uri(WTO.ComponentPropertyMeasure);
 		public static final URI ComponentPropertyValueDouble = _uri(WTO.ComponentPropertyValueDouble);
 		public static final URI ComponentPropertyValueInteger = _uri(WTO.ComponentPropertyValueInteger);
+		public static final URI ComponentPropertyValueString = _uri(WTO.ComponentPropertyValueString);
 		public static final URI ComponentPropertyValueTemporalLocation = _uri(WTO.ComponentPropertyValueTemporalLocation);
 		public static final URI ComponentPropertyValueUri = _uri(WTO.ComponentPropertyValueUri);
 		public static final URI AttributeValueDouble = _uri(WTO.AttributeValueDouble);
 		public static final URI AttributeValueTemporalLocation = _uri(WTO.AttributeValueTemporalLocation);
 		public static final URI AttributeValueString = _uri(WTO.AttributeValueString);
+		public static final URI AttributeValueInteger = _uri(WTO.AttributeValueInteger);
+		public static final URI AttributeValueUri = _uri(WTO.AttributeValueUri);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
