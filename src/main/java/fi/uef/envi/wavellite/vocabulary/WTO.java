@@ -103,6 +103,9 @@ public class WTO {
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation */
 	public static final String ComponentPropertyValueTemporalLocation = _("ComponentPropertyValueTemporalLocation");
 
+	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueSpatialLocation */
+	public static final String ComponentPropertyValueSpatialLocation = _("ComponentPropertyValueSpatialLocation");
+
 	/** http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri */
 	public static final String ComponentPropertyValueUri = _("ComponentPropertyValueUri");
 
@@ -120,6 +123,9 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#AttributeValueInteger */
 	public static final String AttributeValueInteger = _("AttributeValueInteger");
+
+	/** http://envi.uef.fi/wavellite/wto#AttributeValueSpatialLocation */
+	public static final String AttributeValueSpatialLocation = _("AttributeValueSpatialLocation");
 
 	public static class asURI {
 
@@ -144,11 +150,13 @@ public class WTO {
 		public static final URI ComponentPropertyValueString = _uri(WTO.ComponentPropertyValueString);
 		public static final URI ComponentPropertyValueTemporalLocation = _uri(WTO.ComponentPropertyValueTemporalLocation);
 		public static final URI ComponentPropertyValueUri = _uri(WTO.ComponentPropertyValueUri);
+		public static final URI ComponentPropertyValueSpatialLocation = _uri(WTO.ComponentPropertyValueSpatialLocation);
 		public static final URI AttributeValueDouble = _uri(WTO.AttributeValueDouble);
 		public static final URI AttributeValueTemporalLocation = _uri(WTO.AttributeValueTemporalLocation);
 		public static final URI AttributeValueString = _uri(WTO.AttributeValueString);
 		public static final URI AttributeValueInteger = _uri(WTO.AttributeValueInteger);
 		public static final URI AttributeValueUri = _uri(WTO.AttributeValueUri);
+		public static final URI AttributeValueSpatialLocation = _uri(WTO.AttributeValueSpatialLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);

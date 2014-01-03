@@ -96,6 +96,7 @@ public class SSN {
 		public static final URI observationResultTime = _uri(SSN.observationResultTime);
 		public static final URI SensorOutput = _uri(SSN.SensorOutput);
 		public static final URI ObservationValue = _uri(SSN.ObservationValue);
+		public static final URI hasValue = _uri(SSN.hasValue);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);

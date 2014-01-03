@@ -42,6 +42,9 @@ public class DUL {
 	/** http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace */
 	public static final String PhysicalPlace = _("PhysicalPlace");
 	
+	/** http://www.loa-cnr.it/ontologies/DUL.owl#Place */
+	public static final String Place = _("Place");
+	
 	/** http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion */
 	public static final String SpaceRegion = _("SpaceRegion");
 
@@ -50,6 +53,9 @@ public class DUL {
 
 	/** http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion */
 	public static final String hasRegion = _("hasRegion");
+	
+	/** http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation */
+	public static final String hasLocation = _("hasLocation");
 
 	public static final class asURI {
 
@@ -59,9 +65,11 @@ public class DUL {
 		public static final URI Region = _uri(DUL.Region);
 		public static final URI TimeInterval = _uri(DUL.TimeInterval);
 		public static final URI PhysicalPlace = _uri(DUL.PhysicalPlace);
+		public static final URI Place = _uri(DUL.Place);
 		public static final URI SpaceRegion = _uri(DUL.SpaceRegion);
 		public static final URI hasRegionDataValue = _uri(DUL.hasRegionDataValue);
 		public static final URI hasRegion = _uri(DUL.hasRegion);
+		public static final URI hasLocation = _uri(DUL.hasLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
