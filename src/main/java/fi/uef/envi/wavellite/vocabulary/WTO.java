@@ -54,6 +54,9 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#SpatialLocationQuantitative */
 	public static final String SpatialLocationQuantitative = _("SpatialLocationQuantitative");
+	
+	/** http://envi.uef.fi/wavellite/wto#SpatialGeometry */
+	public static final String SpatialGeometry = _("SpatialGeometry");
 
 	/** http://envi.uef.fi/wavellite/wto#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
