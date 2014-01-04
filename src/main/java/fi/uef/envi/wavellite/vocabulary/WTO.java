@@ -57,6 +57,15 @@ public class WTO {
 	
 	/** http://envi.uef.fi/wavellite/wto#SpatialGeometry */
 	public static final String SpatialGeometry = _("SpatialGeometry");
+	
+	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryPoint */
+	public static final String SpatialGeometryPoint = _("SpatialGeometryPoint");
+	
+	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryPolygon */
+	public static final String SpatialGeometryPolygon = _("SpatialGeometryPolygon");
+	
+	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryLineString */
+	public static final String SpatialGeometryLineString = _("SpatialGeometryLineString");
 
 	/** http://envi.uef.fi/wavellite/wto#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
@@ -144,6 +153,10 @@ public class WTO {
 		public static final URI SpatialLocation = _uri(WTO.SpatialLocation);
 		public static final URI SpatialLocationQualitative = _uri(WTO.SpatialLocationQualitative);
 		public static final URI SpatialLocationQuantitative = _uri(WTO.SpatialLocationQuantitative);
+		public static final URI SpatialGeometry = _uri(WTO.SpatialGeometry);
+		public static final URI SpatialGeometryPoint = _uri(WTO.SpatialGeometryPoint);
+		public static final URI SpatialGeometryPolygon = _uri(WTO.SpatialGeometryPolygon);
+		public static final URI SpatialGeometryLineString = _uri(WTO.SpatialGeometryLineString);
 		public static final URI DatasetObservation = _uri(WTO.DatasetObservation);
 		public static final URI Component = _uri(WTO.Component);
 		public static final URI ComponentPropertyDomain = _uri(WTO.ComponentPropertyDimension);
