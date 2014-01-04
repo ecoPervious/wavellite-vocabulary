@@ -30,8 +30,8 @@ public class GeoSPARQL {
 
 	public static final String ns = "http://www.opengis.net/ont/geosparql";
 	
-	/** http://www.opengis.net/ont/geosparql#hasDefaultGeometry **/
-	public static final String hasDefaultGeometry = _("hasDefaultGeometry");
+	/** http://www.opengis.net/ont/geosparql#hasGeometry **/
+	public static final String hasGeometry = _("hasGeometry");
 	
 	/** http://www.opengis.net/ont/geosparql#wktLiteral **/
 	public static final String wktLiteral = _("wktLiteral");
@@ -43,7 +43,7 @@ public class GeoSPARQL {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
-		public static final URI hasDefaultGeometry = _uri(GeoSPARQL.hasDefaultGeometry);
+		public static final URI hasGeometry = _uri(GeoSPARQL.hasGeometry);
 		public static final URI wktLiteral = _uri(GeoSPARQL.wktLiteral);
 		public static final URI asWKT = _uri(GeoSPARQL.asWKT);
 		
