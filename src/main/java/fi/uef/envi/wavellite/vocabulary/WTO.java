@@ -40,11 +40,11 @@ public class WTO {
 	/** http://envi.uef.fi/wavellite/wto#TemporalLocation */
 	public static final String TemporalLocation = _("TemporalLocation");
 
-	/** http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime */
-	public static final String TemporalLocationDateTime = _("TemporalLocationDateTime");
+	/** http://envi.uef.fi/wavellite/wto#TimePoint */
+	public static final String TimePoint = _("TimePoint");
 
-	/** http://envi.uef.fi/wavellite/wto#TemporalLocationInterval */
-	public static final String TemporalLocationInterval = _("TemporalLocationInterval");
+	/** http://envi.uef.fi/wavellite/wto#TimeInterval */
+	public static final String TimeInterval = _("TimeInterval");
 
 	/** http://envi.uef.fi/wavellite/wto#SpatialLocation */
 	public static final String SpatialLocation = _("SpatialLocation");
@@ -58,14 +58,14 @@ public class WTO {
 	/** http://envi.uef.fi/wavellite/wto#SpatialGeometry */
 	public static final String SpatialGeometry = _("SpatialGeometry");
 	
-	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryPoint */
-	public static final String SpatialGeometryPoint = _("SpatialGeometryPoint");
+	/** http://envi.uef.fi/wavellite/wto#Point */
+	public static final String Point = _("Point");
 	
-	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryPolygon */
-	public static final String SpatialGeometryPolygon = _("SpatialGeometryPolygon");
+	/** http://envi.uef.fi/wavellite/wto#Polygon */
+	public static final String Polygon = _("Polygon");
 	
-	/** http://envi.uef.fi/wavellite/wto#SpatialGeometryLineString */
-	public static final String SpatialGeometryLineString = _("SpatialGeometryLineString");
+	/** http://envi.uef.fi/wavellite/wto#LineString */
+	public static final String LineString = _("LineString");
 
 	/** http://envi.uef.fi/wavellite/wto#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
@@ -90,6 +90,9 @@ public class WTO {
 
 	/** http://envi.uef.fi/wavellite/wto#SensorObservation */
 	public static final String SensorObservation = _("SensorObservation");
+	
+	/** http://envi.uef.fi/wavellite/wto#ObservationValueDouble */
+	public static final String ObservationValueDouble = _("ObservationValueDouble");
 
 	/** http://envi.uef.fi/wavellite/wto#DatasetObservation */
 	public static final String DatasetObservation = _("DatasetObservation");
@@ -147,16 +150,17 @@ public class WTO {
 		public static final URI Property = _uri(WTO.Property);
 		public static final URI Feature = _uri(WTO.Feature);
 		public static final URI SensorObservation = _uri(WTO.SensorObservation);
+		public static final URI ObservationValueDouble = _uri(WTO.ObservationValueDouble);
 		public static final URI TemporalLocation = _uri(WTO.TemporalLocation);
-		public static final URI TemporalLocationDateTime = _uri(WTO.TemporalLocationDateTime);
-		public static final URI TemporalLocationInterval = _uri(WTO.TemporalLocationInterval);
+		public static final URI TimePoint = _uri(WTO.TimePoint);
+		public static final URI TimeInterval = _uri(WTO.TimeInterval);
 		public static final URI SpatialLocation = _uri(WTO.SpatialLocation);
 		public static final URI SpatialLocationQualitative = _uri(WTO.SpatialLocationQualitative);
 		public static final URI SpatialLocationQuantitative = _uri(WTO.SpatialLocationQuantitative);
 		public static final URI SpatialGeometry = _uri(WTO.SpatialGeometry);
-		public static final URI SpatialGeometryPoint = _uri(WTO.SpatialGeometryPoint);
-		public static final URI SpatialGeometryPolygon = _uri(WTO.SpatialGeometryPolygon);
-		public static final URI SpatialGeometryLineString = _uri(WTO.SpatialGeometryLineString);
+		public static final URI Point = _uri(WTO.Point);
+		public static final URI Polygon = _uri(WTO.Polygon);
+		public static final URI LineString = _uri(WTO.LineString);
 		public static final URI DatasetObservation = _uri(WTO.DatasetObservation);
 		public static final URI Component = _uri(WTO.Component);
 		public static final URI ComponentPropertyDomain = _uri(WTO.ComponentPropertyDimension);

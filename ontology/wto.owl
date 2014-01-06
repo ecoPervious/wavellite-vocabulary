@@ -68,11 +68,147 @@
     
 
 
+    <!-- http://envi.uef.fi/wavellite/wto#Component -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Component">
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValue -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue">
+        <rdfs:label xml:lang="en">Component property value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueDouble -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueDouble">
+        <rdfs:label xml:lang="en">Double</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger">
+        <rdfs:label xml:lang="en">Integer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueSpatialLocation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueSpatialLocation">
+        <rdfs:label xml:lang="en">Spatial location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString">
+        <rdfs:label xml:lang="en">String</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation">
+        <rdfs:label xml:lang="en">Temporal location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri">
+        <rdfs:label xml:lang="en">URI</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ConceptScheme -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ConceptScheme">
+        <rdfs:label xml:lang="en">Wavellite concept scheme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#DatasetEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetEngine">
+        <rdfs:label xml:lang="en">Dataset engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#DatasetObservation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetObservation">
+        <rdfs:label xml:lang="en">Dataset observation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#DerivationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationEngine">
+        <rdfs:label xml:lang="en">Derivation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#DerivationReader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationReader">
+        <rdfs:label xml:lang="en">Derivation reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Reader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#DerivationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationWriter">
+        <rdfs:label xml:lang="en">Derivation writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Engine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Engine">
+        <rdfs:label xml:lang="en">Engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
+    </owl:Class>
+    
+
+
     <!-- http://envi.uef.fi/wavellite/wto#Entity -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Entity">
-        <rdfs:label xml:lang="en">Entity (Wavellite)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Anything in the domain of Wavellite is an entity. Wavellite entities have an identifier and an optional type.</rdfs:comment>
     </owl:Class>
     
@@ -81,11 +217,29 @@
     <!-- http://envi.uef.fi/wavellite/wto#Feature -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Feature">
-        <rdfs:label xml:lang="en">Feature (Wavellite)</rdfs:label>
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
         <rdfs:comment xml:lang="en">A WTO Feature is an subclass class of SSN FeatureOfInterest. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite feature may be a representation for a monitored phenomenon. In contrast, at the situation layer, a Wavellite feature may be an object relevant to a situation, for instance we may state that a phenomenon is observed in an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#LearningModule -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#LearningModule">
+        <rdfs:label xml:lang="en">Learning module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#LineString -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#LineString">
+        <rdfs:label xml:lang="en">Line string</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
     </owl:Class>
     
 
@@ -95,6 +249,15 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementContext">
         <rdfs:label xml:lang="en">Measurement context</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#MeasurementEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementEngine">
+        <rdfs:label xml:lang="en">Measurement engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
     </owl:Class>
     
 
@@ -120,8 +283,91 @@
     <!-- http://envi.uef.fi/wavellite/wto#MeasurementValueDouble -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementValueDouble">
-        <rdfs:label xml:lang="en">Double (measurement value)</rdfs:label>
+        <rdfs:label xml:lang="en">Double</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Module -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Module">
+        <rdfs:label xml:lang="en">Module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ObservationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationEngine">
+        <rdfs:label xml:lang="en">Observation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ObservationReader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationReader">
+        <rdfs:label xml:lang="en">Observation reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Reader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ObservationValue -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationValue">
+        <rdfs:label xml:lang="en">Observation value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ObservationValueDouble -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationValueDouble">
+        <rdfs:label xml:lang="en">Double</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ObservationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationWriter">
+        <rdfs:label xml:lang="en">Observation writer
+</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Point -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Point">
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Polygon -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Polygon">
+        <rdfs:label xml:lang="en">Polygon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#ProcessingModule -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ProcessingModule">
+        <rdfs:label xml:lang="en">Processing module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
     </owl:Class>
     
 
@@ -129,10 +375,29 @@
     <!-- http://envi.uef.fi/wavellite/wto#Property -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Property">
-        <rdfs:label xml:lang="en">Property (Wavellite)</rdfs:label>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+        <rdfs:comment xml:lang="en">A WTO Property is a subclass of SSN Property. In addition, it is also a STO Relevant Individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite property may be a representation for a property of a feature of interest in SSN observations. In contrast, at the situation layer, a Wavellite property may be an object relevant to a situation, for instance we may state that a certain property of an environmental phenomenon is involved in a situation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Quality -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Quality">
+        <rdfs:label xml:lang="en">Quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#Reader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Reader">
+        <rdfs:label xml:lang="en">Reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
     </owl:Class>
     
 
@@ -140,7 +405,7 @@
     <!-- http://envi.uef.fi/wavellite/wto#Sensor -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Sensor">
-        <rdfs:label xml:lang="en">Sensor (Wavellite)</rdfs:label>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
@@ -155,6 +420,33 @@
         <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SituationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationEngine">
+        <rdfs:label xml:lang="en">Situation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SituationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationWriter">
+        <rdfs:label xml:lang="en">Situation writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#SpatialGeometry -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialGeometry">
+        <rdfs:label xml:lang="en">Spatial geometry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
     </owl:Class>
     
 
@@ -191,6 +483,15 @@
     
 
 
+    <!-- http://envi.uef.fi/wavellite/wto#StoreModule -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#StoreModule">
+        <rdfs:label xml:lang="en">Store module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
+    </owl:Class>
+    
+
+
     <!-- http://envi.uef.fi/wavellite/wto#TemporalLocation -->
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocation">
@@ -203,22 +504,31 @@
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime -->
+    <!-- http://envi.uef.fi/wavellite/wto#TimeInterval -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocationDateTime">
-        <rdfs:label xml:lang="en">Date time temporal location</rdfs:label>
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TimeInterval">
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#TimePoint -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TimePoint">
+        <rdfs:label xml:lang="en">Time point</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
     </owl:Class>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#TemporalLocationInterval -->
+    <!-- http://envi.uef.fi/wavellite/wto#Writer -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocationInterval">
-        <rdfs:label xml:lang="en">Interval temporal location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Writer">
+        <rdfs:label xml:lang="en">Writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
     </owl:Class>
 </rdf:RDF>
 
