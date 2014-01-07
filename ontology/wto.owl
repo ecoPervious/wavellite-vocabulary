@@ -68,12 +68,12 @@
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#hasProcuded -->
+    <!-- http://envi.uef.fi/wavellite/wto#executes -->
 
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#hasProcuded">
-        <rdfs:label xml:lang="en">has produced</rdfs:label>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#executes">
+        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
+        <owl:inverseOf rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
     </owl:ObjectProperty>
     
 
@@ -82,7 +82,17 @@
 
     <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isExecutedBy">
         <rdfs:label xml:lang="en">is executed by</rdfs:label>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wto#isProducerOf -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isProducerOf">
+        <rdfs:label xml:lang="en">is producer of</rdfs:label>
+        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
         <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
     </owl:ObjectProperty>
     
@@ -106,7 +116,7 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -312,13 +322,7 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -326,6 +330,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DerivationEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -463,7 +473,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorObservation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -651,7 +661,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementResult"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -679,6 +689,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservationProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
                 <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementResultProcessing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -686,12 +702,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
                 <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorObservationPersistence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservationProcessing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -721,14 +731,14 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationWriter"/>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationWriter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -742,13 +752,7 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -756,6 +760,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -796,12 +806,6 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
-                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationEngine"/>
             </owl:Restriction>
@@ -810,6 +814,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
+                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -832,14 +842,14 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationWriter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationWriter"/>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -853,20 +863,20 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#hasProcuded"/>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
                 <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationEngine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
                 <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationEngine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -896,13 +906,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationPersistence"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationRepresentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationRepresentation"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationPersistence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
