@@ -49,11 +49,11 @@ public class WTO {
 	/** http://envi.uef.fi/wavellite/wto#SpatialLocation */
 	public static final String SpatialLocation = _("SpatialLocation");
 
-	/** http://envi.uef.fi/wavellite/wto#SpatialLocationQualitative */
-	public static final String SpatialLocationQualitative = _("SpatialLocationQualitative");
+	/** http://envi.uef.fi/wavellite/wto#SpatialPlace */
+	public static final String SpatialPlace = _("SpatialPlace");
 
-	/** http://envi.uef.fi/wavellite/wto#SpatialLocationQuantitative */
-	public static final String SpatialLocationQuantitative = _("SpatialLocationQuantitative");
+	/** http://envi.uef.fi/wavellite/wto#SpatialRegion */
+	public static final String SpatialRegion = _("SpatialRegion");
 	
 	/** http://envi.uef.fi/wavellite/wto#SpatialGeometry */
 	public static final String SpatialGeometry = _("SpatialGeometry");
@@ -155,8 +155,8 @@ public class WTO {
 		public static final URI TimePoint = _uri(WTO.TimePoint);
 		public static final URI TimeInterval = _uri(WTO.TimeInterval);
 		public static final URI SpatialLocation = _uri(WTO.SpatialLocation);
-		public static final URI SpatialLocationQualitative = _uri(WTO.SpatialLocationQualitative);
-		public static final URI SpatialLocationQuantitative = _uri(WTO.SpatialLocationQuantitative);
+		public static final URI SpatialPlace = _uri(WTO.SpatialPlace);
+		public static final URI SpatialRegion = _uri(WTO.SpatialRegion);
 		public static final URI SpatialGeometry = _uri(WTO.SpatialGeometry);
 		public static final URI Point = _uri(WTO.Point);
 		public static final URI Polygon = _uri(WTO.Polygon);
