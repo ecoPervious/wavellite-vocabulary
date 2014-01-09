@@ -68,12 +68,345 @@
     
 
 
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttribute -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
     <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue">
         <rdfs:label xml:lang="en">has attribute value</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">The STO object property relates a STO Attribute with a STO Value. Given that STO values are DUL Regions, we model this STO object property as a sub property of the DUL &apos;has region&apos;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehContains -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehContains">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCoveredBy -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehCoveredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCovers -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehCovers">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehEquals">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehInside -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehInside">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehMeet">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehOverlap -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehOverlap">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ec">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8eq -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8eq">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntpp -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntpp">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntppi -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntppi">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8tpp">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tppi -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8tppi">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfEquals -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfEquals">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfIntersects -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfIntersects">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfOverlaps -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfOverlaps">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfTouches">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#after -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#after">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#follows"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#before -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#before">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#precedes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasBeginning">
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#startTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDateTimeDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDateTimeDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDurationDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDurationDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#endTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inDateTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inside -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inside">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalAfter -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#after"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalContains -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalContains">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalDuring -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalDuring">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalEquals -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalEquals">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalFinishedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishes -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalFinishes">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMeets -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalMeets">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMetBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalMetBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlappedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalOverlappedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlaps -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalOverlaps">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStartedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalStartedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStarts -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalStarts">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
