@@ -68,75 +68,47 @@
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#executes -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue -->
 
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#executes">
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-        <owl:inverseOf rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-    </owl:ObjectProperty>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue">
+        <rdfs:label xml:lang="en">has attribute value</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The STO object property relates a STO Attribute with a STO Value. Given that STO values are DUL Regions, we model this STO object property as a sub property of the DUL &apos;has region&apos;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#isExecutedBy -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isExecutedBy">
-        <rdfs:label xml:lang="en">is executed by</rdfs:label>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-    </owl:ObjectProperty>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#isOperatedBy -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#attributeValue -->
 
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isOperatedBy">
-        <rdfs:label xml:lang="en">is operated by</rdfs:label>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Operator"/>
-        <owl:inverseOf rdf:resource="http://envi.uef.fi/wavellite/wto#operates"/>
-    </owl:ObjectProperty>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#attributeValue">
+        <rdfs:label xml:lang="en">The STO datatype property that relates a STO Value with an XSD datatype. Because STO Value is a DUL Region this property is a sub property of DUL &apos;has region data value&apos;.</rdfs:label>
+        <rdfs:label xml:lang="en">attribute value</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#isProducerOf -->
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
 
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isProducerOf">
-        <rdfs:label xml:lang="en">is producer of</rdfs:label>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#isUtilizedBy -->
-
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#isUtilizedBy">
-        <rdfs:label xml:lang="en">is utilized by</rdfs:label>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-        <owl:inverseOf rdf:resource="http://envi.uef.fi/wavellite/wto#utilizes"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#operates -->
-
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#operates">
-        <rdfs:label xml:lang="en">operates</rdfs:label>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Operator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#utilizes -->
-
-    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/wto#utilizes">
-        <rdfs:label xml:lang="en">utilizes</rdfs:label>
-        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-    </owl:ObjectProperty>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
+        <rdfs:label xml:lang="en">in XSD dateTime</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">This OWL-Time datatype property relates an OWL-Time Instant to an XSD dateTime. Given that OWL-Time Instant is a DUL Region, this datatype property is modelled as a sub property of &apos;has region data value&apos;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
     
 
 
@@ -151,934 +123,391 @@
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#Acquirer -->
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Acquirer">
-        <rdfs:label xml:lang="en">Acquirer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Operator"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
+        <owl:equivalentClass rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#AtomicTask -->
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Input -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AtomicTask">
-        <rdfs:label xml:lang="en">Atomic task</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#AttributeValue -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AttributeValue">
-        <rdfs:label xml:lang="en">Attribute value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#AttributeValueDouble -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AttributeValueDouble">
-        <rdfs:label xml:lang="en">Double</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#AttributeValueInteger -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AttributeValueInteger">
-        <rdfs:label xml:lang="en">Integer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#AttributeValueString -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AttributeValueString">
-        <rdfs:label xml:lang="en">String</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#AttributeValueUri -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#AttributeValueUri">
-        <rdfs:label xml:lang="en">URI</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComplexTask -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComplexTask">
-        <rdfs:label xml:lang="en">Complex task</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Task"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Component -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Component">
-        <rdfs:label xml:lang="en">Component</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValue -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue">
-        <rdfs:label xml:lang="en">Component property value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueDouble -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueDouble">
-        <rdfs:label xml:lang="en">Double</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueInteger">
-        <rdfs:label xml:lang="en">Integer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueSpatialLocation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueSpatialLocation">
-        <rdfs:label xml:lang="en">Spatial location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueString">
-        <rdfs:label xml:lang="en">String</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueTemporalLocation">
-        <rdfs:label xml:lang="en">Temporal location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ComponentPropertyValueUri">
-        <rdfs:label xml:lang="en">URI</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComponentPropertyValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#CompositeTask -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#CompositeTask">
-        <rdfs:label xml:lang="en">Composite task</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SimpleTask"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ConceptScheme -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ConceptScheme">
-        <rdfs:label xml:lang="en">Wavellite concept scheme</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DatasetEngine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetEngine">
-        <rdfs:label xml:lang="en">Dataset engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DatasetObservation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetObservation">
-        <rdfs:label xml:lang="en">Dataset observation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#Observation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DatasetObservationPersistence -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetObservationPersistence">
-        <rdfs:label xml:lang="en">Dataset observation persistence</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DerivationWriter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DatasetObservationProcessing -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DatasetObservationProcessing">
-        <rdfs:label xml:lang="en">Dataset observation processing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DerivationEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DerivationEngine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationEngine">
-        <rdfs:label xml:lang="en">Derivation engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DerivationReader -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationReader">
-        <rdfs:label xml:lang="en">Derivation reader</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Reader"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#DerivationWriter -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#DerivationWriter">
-        <rdfs:label xml:lang="en">Derivation writer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Engine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Engine">
-        <rdfs:label xml:lang="en">Engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Entity -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Entity">
-        <rdfs:label xml:lang="en">Entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
-        <rdfs:comment xml:lang="en">Anything in the domain of Wavellite is an entity. Wavellite entities have an identifier and an optional type.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Feature -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Feature">
-        <rdfs:label xml:lang="en">Feature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
-        <rdfs:comment xml:lang="en">A WTO Feature is an subclass class of SSN FeatureOfInterest. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite feature may be a representation for a monitored phenomenon. In contrast, at the situation layer, a Wavellite feature may be an object relevant to a situation, for instance we may state that a phenomenon is observed in an event.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#LearningModule -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#LearningModule">
-        <rdfs:label xml:lang="en">Learning module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#LineString -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#LineString">
-        <rdfs:label xml:lang="en">Line string</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementContext -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementContext">
-        <rdfs:label xml:lang="en">Measurement context</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementEngine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementEngine">
-        <rdfs:label xml:lang="en">Measurement engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementResult -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementResult">
-        <rdfs:label xml:lang="en">Measurement result</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Input">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
-    </owl:Class>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementResultProcessing -->
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Output -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementResultProcessing">
-        <rdfs:label xml:lang="en">Measurement result processing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorObservation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Output">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementValue -->
+    <!-- http://purl.org/NET/scovo#Dataset -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementValue">
-        <rdfs:label xml:lang="en">Measurement value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+    <rdf:Description rdf:about="http://purl.org/NET/scovo#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/NET/scovo#Item -->
+
+    <rdf:Description rdf:about="http://purl.org/NET/scovo#Item">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#Attachable -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#Attachable">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:comment xml:lang="en">We model datasets, observations of datasets, and slices as DUL information objects.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#CodeList -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#CodeList">
+        <rdfs:label xml:lang="en">Code list</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Collection"/>
+        <rdfs:isDefinedBy>http://purl.org/linked-data/cube</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A QB code list is a DUL collection, specifically a collection of codes.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#ComponentProperty -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#ComponentProperty">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObjectAttribute"/>
+        <rdfs:comment xml:lang="en">QB component properties are considered to be &apos;statistical attributes over a collection of entities&apos; and, thus, DUL social attributes.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#ComponentSet -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#ComponentSet">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#ObservationGroup -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#ObservationGroup">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Agent -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Agent">
+        <owl:equivalentClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Attribute -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Attribute">
+        <rdfs:label xml:lang="en">Attribute</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#MeasurementValueDouble -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#MeasurementValueDouble">
-        <rdfs:label xml:lang="en">Double</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Module -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Module">
-        <rdfs:label xml:lang="en">Module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ObservationEngine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationEngine">
-        <rdfs:label xml:lang="en">Observation engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ObservationReader -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationReader">
-        <rdfs:label xml:lang="en">Observation reader</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Reader"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ObservationValue -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationValue">
-        <rdfs:label xml:lang="en">Observation value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ObservationValueDouble -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationValueDouble">
-        <rdfs:label xml:lang="en">Double</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationValue"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ObservationWriter -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ObservationWriter">
-        <rdfs:label xml:lang="en">Observation writer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Operator -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Operator">
-        <rdfs:label xml:lang="en">Operator</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Point -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Point">
-        <rdfs:label xml:lang="en">Point</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Polygon -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Polygon">
-        <rdfs:label xml:lang="en">Polygon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialGeometry"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#ProcessingModule -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#ProcessingModule">
-        <rdfs:label xml:lang="en">Processing module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Processor -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Processor">
-        <rdfs:label xml:lang="en">Processor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Operator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Property -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Property">
-        <rdfs:label xml:lang="en">Property</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
-        <rdfs:comment xml:lang="en">A WTO Property is a subclass of SSN Property. In addition, it is also a STO Relevant Individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite property may be a representation for a property of a feature of interest in SSN observations. In contrast, at the situation layer, a Wavellite property may be an object relevant to a situation, for instance we may state that a certain property of an environmental phenomenon is involved in a situation.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Quality -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Quality">
-        <rdfs:label xml:lang="en">Quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Reader -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Reader">
-        <rdfs:label xml:lang="en">Reader</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Sensor -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Sensor">
-        <rdfs:label xml:lang="en">Sensor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
-        <rdfs:comment xml:lang="en">A WTO Sensor is a subclass of SSN Sensor. In addition, it is also a STO relevant individual, i.e. an object of infons. Hence, at the observation layer, a Wavellite sensor may be a representation for a sensing device that observes SSN observations. In contrast, at the situation layer, a Wavellite sensor may be an object relevant to a situation, for instance we may state that the phenomenon of an event is observed by a sensing device.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SensorDataAcquisition -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorDataAcquisition">
-        <rdfs:label xml:lang="en">Sensor data acquisition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAttribute"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObjectAttribute"/>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementResult"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">STO Attribute is modelled as a Region and may be a DUL physical attribute or a DUL social attribute.</rdfs:comment>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SensorDataProcessing -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Dimensionality -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorDataProcessing">
-        <rdfs:label xml:lang="en">Sensor data processing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#CompositeTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#MeasurementResultProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservationProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservationPersistence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorObservationProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataAcquisition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorObservationPersistence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Dimensionality">
+        <rdfs:label xml:lang="en">Dimensionality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">A STO Dimensionality has members meter, meter per second, second. Hence, we model it as a DUL &apos;unit of measure&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SensorObservation -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#ElementaryInfon -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorObservation">
-        <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#ElementaryInfon">
+        <rdfs:label xml:lang="en">Elementary infon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:comment xml:lang="en">A STO ElementaryInfon is modelled as a DUL information object. According to the Situation Theory, an elementary infon is a tuple consisting of a relation, relevant objects, and a polarity. </rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SensorObservationPersistence -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Individual -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorObservationPersistence">
-        <rdfs:label xml:lang="en">Sensor observation persistence</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Individual">
+        <rdfs:label xml:lang="en">Individual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A STO Individual may be a DUL physical object or a DUL social object.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Location -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Location">
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAttribute"/>
+        <rdfs:comment xml:lang="en">STO location is a DUL physical attribute because location is a physical value of a physical object.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Object -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object">
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#ObservationWriter"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Event"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
-    </owl:Class>
+        <rdfs:comment xml:lang="en">A STO object can be a DUL object, a DUL abstract, or a DUL event. These classes are disjoint; hence, the chosen modelling. A STO object may be a DUL event because a STO individual may be a DUL event.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SensorObservationProcessing -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Proposition -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SensorObservationProcessing">
-        <rdfs:label xml:lang="en">Sensor observation processing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#DatasetObservation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Proposition">
+        <rdfs:label xml:lang="en">Proposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Description"/>
+        <rdfs:comment xml:lang="en">STO propositions are modelled as DUL social objects, specifically as DUL descriptions.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SimpleTask -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Relation -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SimpleTask">
-        <rdfs:label xml:lang="en">Simple task</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Task"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Relation">
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#FormalEntity"/>
+        <rdfs:comment xml:lang="en">A STO relation is modelled as an DUL abstract entity, as a relation (e.g. velocity) is not located in time-space. Specifically, we model STO relations as DUL formal entities.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:seeAlso>http://www.loa-cnr.it/ontologies/DUL.owl#Relation</rdfs:seeAlso>
+    </rdf:Description>
     
 
 
-    <!-- http://envi.uef.fi/wavellite/wto#SituationAcquisition -->
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Rule -->
 
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationAcquisition">
-        <rdfs:label xml:lang="en">Situation acquisition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SituationEngine -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationEngine">
-        <rdfs:label xml:lang="en">Situation engine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Engine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SituationPersistence -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationPersistence">
-        <rdfs:label xml:lang="en">Situation persistence</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationWriter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SituationRepresentation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationRepresentation">
-        <rdfs:label xml:lang="en">Situation representation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AtomicTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isProducerOf"/>
-                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/wto#isExecutedBy"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationEngine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isConstituentOf"/>
-                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SituationWriter -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationWriter">
-        <rdfs:label xml:lang="en">Situation writer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Writer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation">
-        <rdfs:label xml:lang="en">Situational knowledge representation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#CompositeTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationAcquisition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationPersistence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationRepresentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SpatialGeometry -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialGeometry">
-        <rdfs:label xml:lang="en">Spatial geometry</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SpatialLocation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialLocation">
-        <rdfs:label xml:lang="en">Spatial location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SpatialPlace -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialPlace">
-        <rdfs:label xml:lang="en">Spatial place</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#SpatialRegion -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#SpatialRegion">
-        <rdfs:label xml:lang="en">Spatial region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#SpatialLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#StoreModule -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#StoreModule">
-        <rdfs:label xml:lang="en">Store module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Module"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Task -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Task">
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ConceptScheme"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Task"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#TemporalLocation -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TemporalLocation">
-        <rdfs:label xml:lang="en">Temporal location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#AttributeValue"/>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#TimeInterval -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TimeInterval">
-        <rdfs:label xml:lang="en">Time interval</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#TimePoint -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#TimePoint">
-        <rdfs:label xml:lang="en">Time point</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#TemporalLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Translator -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Translator">
-        <rdfs:label xml:lang="en">Translator</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Operator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#WavelliteTask -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#WavelliteTask">
-        <rdfs:label xml:lang="en">Wavellite task</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#ComplexTask"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SituationalKnowledgeRepresentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
-                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/wto#SensorDataProcessing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The representation of situational knowledge acquired from sensor data for environmental phenomena</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#Writer -->
-
-    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wto#Writer">
-        <rdfs:label xml:lang="en">Writer</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Component"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Rule">
+        <rdfs:label xml:lang="en">Rule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#FormalEntity"/>
+        <rdfs:comment xml:lang="en">A STO rule is modelled as a DUL abstract entity, as it is not located in time-space. Specifically, rules are DUL formal entities.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     
 
 
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Situation -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation">
-        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wto#Entity"/>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Situation"/>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Value -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Value">
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+        <rdfs:comment xml:lang="en">A STO Value relates via datatype property attributeValue to the actual value. Thus, a STO Value is modelled as a DUL Region.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Velocity -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Velocity">
+        <rdfs:label xml:lang="en">Velocity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAttribute"/>
+        <rdfs:comment xml:lang="en">STO velocity is a DUL physical attribute, because velocity is a physical value of a physical object.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Agent -->
+
+    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Agent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Concept -->
+
+    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Concept">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+        <rdfs:comment xml:lang="en">A GeoSPARQL feature is equivalent to SSN &apos;feature of interest&apos;. Feature may be a DUL event or a DUL object, specifically it may be a DUL physical object (e.g. a DUL natural person) or a DUL social object (e.g. a DUL place).</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Event"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">GeoSPARQL spatial objects are modelled as DUL entities. They subsume both features and geometries. Features are real world phenomena, e.g. as in SSN &apos;feature of interest&apos;. The SSN feature of interest is modelled as being either a DUL event or a DUL object, which are disjoint. Thus, a GeoSPARQL spatial object is necessarily subsumbed by both DUL event and DUL object, too. In addition, GeoSPARQL geometries are DUL abstract entities, specifically DUL space regions. Hence, a GeoSPARQL spatial object is also subsumed by DUL abstract.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Collection"/>
+        <rdfs:comment xml:lang="en">SKOS collections are specifically collections of concepts. We thus model SKOS collections as DUL collections, hence social objects.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeDescription">
+        <rdfs:label xml:lang="en">Date time description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A OWL-Time date time description relates to a OWL-Time instant via the OWL-Time &apos;has date time description&apos; object property. Given that OWL-Time instant is a region and that the corresponding date time description is an alternative way to represent the instant we model OWL-Time date time descriptions also as DUL regions.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:label xml:lang="en">Day of week</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:seeAlso>http://en.wikipedia.org/wiki/Day</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The OWL-Time days of a week (meaning individuals for each of the seven days of a week) are modelled as DUL concepts, specifically DUL units of measure. A OWL-Time day of a week is a day and a day is a unit of time. Days of a week are related to OWL-Time date time descriptions (DUL regions) via the OWL-Time &apos;day of week&apos; object property.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DurationDescription">
+        <rdfs:label xml:lang="en">Duration description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A OWL-Time duration description relates to a OWL-Time date time interval via the OWL-Time &apos;has duration description&apos; object property. Given that OWL-Time date time interval is a region and that the corresponding duration description is a representation of the elapsed time between the two instants defining the interval we model OWL-Time duration descriptions also as DUL regions.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
+        <rdfs:comment xml:lang="en">OWL-Time temporal enties are modelled as DUL time intervals, as we consider both time instants and time intervals to be DUL time intervals, meaning that a OWL-Time instant is a DUL time interval with coinciding start and end time.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalUnit">
+        <rdfs:label xml:lang="en">Temporal unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#TimeZone -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/timezone#TimeZone">
+        <rdfs:label xml:lang="en">Time zone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+        <rdfs:seeAlso>http://en.wikipedia.org/wiki/Time_zone</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A time zone is a region that has a uniform standard time for legal, commercial, and social purposes. It is convenient for areas in close commercial or other communication to keep the same time, so time zones tend to follow the boundaries of countries and their subdivisions.</rdfs:comment>
     </rdf:Description>
     
 
@@ -1086,33 +515,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
+    // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#59fbb1a6-3058-49db-baa5-7621447bf5b5 -->
-
-    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/wto#59fbb1a6-3058-49db-baa5-7621447bf5b5">
-        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/wto#ProcessingModule"/>
-        <rdfs:label xml:lang="en">The measurement result processing module</rdfs:label>
-        <rdfs:comment xml:lang="en">This is the default Wavellite module used to process measurement results to sensor observations.</rdfs:comment>
-        <operates rdf:resource="http://envi.uef.fi/wavellite/wto#db9cb073-6b68-4c9b-9ba3-6072a251ba80"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://envi.uef.fi/wavellite/wto#db9cb073-6b68-4c9b-9ba3-6072a251ba80 -->
-
-    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/wto#db9cb073-6b68-4c9b-9ba3-6072a251ba80">
-        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/wto#Processor"/>
-        <rdfs:label xml:lang="en">The measurement result translator</rdfs:label>
-        <rdfs:comment xml:lang="en">This is the default Wavellite operator used to process measurement results to sensor observations.</rdfs:comment>
-        <isOperatedBy rdf:resource="http://envi.uef.fi/wavellite/wto#59fbb1a6-3058-49db-baa5-7621447bf5b5"/>
-    </owl:NamedIndividual>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#PropertyRelation">
+        <rdfs:label xml:lang="en">PropertyRelation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Sentence">
+        <rdfs:label xml:lang="en">Sentence</rdfs:label>
+        <rdfs:comment xml:lang="en">STO sentence may be an attribute of both a DUL physical object or a DUL social object.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Time">
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+        <rdfs:comment xml:lang="en">STO time is an attribute of an object in an infon, i.e. STO individuals. A STO individual may be a DUL physical object, a DUL social object, or a DUL event. Thus, STO time cannot be specialized as a DUL social attribute.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
 </rdf:RDF>
 
 
