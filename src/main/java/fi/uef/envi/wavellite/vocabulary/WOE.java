@@ -81,24 +81,9 @@ public class WOE {
 	
 	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValue */
 	public static final String ComponentPropertyValue = _("ComponentPropertyValue");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueDouble */
-	public static final String AttributeValueDouble = _("AttributeValueDouble");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueTemporalLocation */
-	public static final String AttributeValueTemporalLocation = _("AttributeValueTemporalLocation");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueString */
-	public static final String AttributeValueString = _("AttributeValueString");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueUri */
-	public static final String AttributeValueUri = _("AttributeValueUri");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueInteger */
-	public static final String AttributeValueInteger = _("AttributeValueInteger");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueSpatialLocation */
-	public static final String AttributeValueSpatialLocation = _("AttributeValueSpatialLocation");
+	
+	/** http://envi.uef.fi/wavellite/wo/entity#RelevantObject */
+	public static final String RelevantObject = _("RelevantObject");
 
 	public static class asURI {
 
@@ -115,14 +100,6 @@ public class WOE {
 		public static final URI SpatialPlace = _uri(WOE.SpatialPlace);
 		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
 		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
-		public static final URI Component = _uri(WOE.Component);
-		public static final URI ComponentPropertyValue = _uri(WOE.ComponentPropertyValue);
-		public static final URI AttributeValueDouble = _uri(WOE.AttributeValueDouble);
-		public static final URI AttributeValueTemporalLocation = _uri(WOE.AttributeValueTemporalLocation);
-		public static final URI AttributeValueString = _uri(WOE.AttributeValueString);
-		public static final URI AttributeValueInteger = _uri(WOE.AttributeValueInteger);
-		public static final URI AttributeValueUri = _uri(WOE.AttributeValueUri);
-		public static final URI AttributeValueSpatialLocation = _uri(WOE.AttributeValueSpatialLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);

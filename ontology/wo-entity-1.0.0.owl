@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/wo/entity#"
+     xml:base="http://envi.uef.fi/wavellite/wo/entity"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wo/entity">
+        <rdfs:label xml:lang="en">Wavellite entity ontology</rdfs:label>
+        <terms:created rdf:datatype="&xsd;date">2014-01-10</terms:created>
+        <dc:identifier>http://envi.uef.fi/wavellite/wo/entity</dc:identifier>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <dc:creator xml:lang="en">Markus Stocker (University of Eastern Finland)</dc:creator>
+        <rdfs:comment xml:lang="en">The Wavellite entity ontology. It builds on the Wavellite core ontology and defines all Wavellite entities.</rdfs:comment>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/wo/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#DatasetObservation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#DatasetObservation">
+        <rdfs:label xml:lang="en">Dataset observation</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/wo/entity#MeasurementResult"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/wo/entity#SensorObservation"/>
+        <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite dataset observation is equivalent to a QB observation. The entity is defined in Wavellite in order to distinguish it from SSN observations.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#Entity -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#Entity">
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite entities may be DUL objects, DUL abstracts, DUL information entities, or STO objects. Thus, we model Wavellite entity as a subclass of DUL entity.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#Feature -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#Feature">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Feature is defined as a Wavellite entity because it may exist as the environmental phenomena for which observations are made or as a relevant individual in a situation.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#MeasurementResult -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#MeasurementResult">
+        <rdfs:label xml:lang="en">Measurement result</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Situation"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/wo/entity#SensorObservation"/>
+        <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+        <rdfs:comment xml:lang="en">A measurement result is a DUL situation that occurred in the process of measurement.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#MeasurementValue -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#MeasurementValue">
+        <rdfs:label xml:lang="en">Measurement value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+        <rdfs:comment xml:lang="en">The value of a measurement result.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#MeasurementValueContext -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#MeasurementValueContext">
+        <rdfs:label xml:lang="en">Measurement value context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The context of a measurement value is a DUL information object and consists of a WO sensor, property, feature, temporal location, spatial location, and quality.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#Property -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#Property">
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Property is defined as a Wavellite entity because it may exist as the property of an environmental phenomena in an observation or as a relevant individual in a situation.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#Sensor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#Sensor">
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Sensor is defined as a Wavellite entity because it may exist as the physical object that made an observation or as a relevant individual in a situation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#SensorObservation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#SensorObservation">
+        <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+        <rdfs:comment>http://envi.uef.fi/wavellite/wo/entity</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Wavellite sensor observation is equivalent to a SSN observation. The entity is defined in Wavellite in order to distinguish it from QB (dataset) observations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#SpatialLocation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#SpatialLocation">
+        <rdfs:label xml:lang="en">Spatial location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#SpatialPlace -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#SpatialPlace">
+        <rdfs:label xml:lang="en">Spatial place</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#SpatialRegion -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#SpatialRegion">
+        <rdfs:label xml:lang="en">Spatial region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#TemporalLocation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#TemporalLocation">
+        <rdfs:label xml:lang="en">Temporal location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#TimeInterval -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#TimeInterval">
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#TemporalLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/wo/entity#TimePoint -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/wo/entity#TimePoint">
+        <rdfs:label xml:lang="en">Time point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/wo/entity#TemporalLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/wo/entity</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#Observation -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#Observation"/>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Situation -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
