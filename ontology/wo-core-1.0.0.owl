@@ -24,8 +24,8 @@
         <terms:modified rdf:datatype="&xsd;date">2014-01-10</terms:modified>
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
         <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/wo/core</dc:identifier>
-        <owl:versionInfo>1.0.0</owl:versionInfo>
         <rdfs:comment>The Wavellite core ontology. Wavellite is a modelling and software framework for the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The Wavellite core ontology aligns the upper ontologies used in Wavellite, specifically, DUL, SSN, STO, GeoSPARQL, and OWL-Time.</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
         <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
@@ -1001,8 +1001,15 @@
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Value">
         <rdfs:label xml:lang="en">Value</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
-        <rdfs:comment xml:lang="en">A STO Value relates via datatype property attributeValue to the actual value. Thus, a STO Value is modelled as a DUL Region.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A STO value relates via STO datatype property attributeValue to the actual value. STO values may be DUL regions (e.g. a time interval as an attribute of a relevant individual) or DUL places (to allow Wavellite spatial places to be attributes or relevant individuals; e.g. a storm in a situation may have a spatial place, such as Helsinki).</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     
