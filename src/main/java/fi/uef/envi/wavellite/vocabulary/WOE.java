@@ -61,9 +61,6 @@ public class WOE {
 	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementResult */
 	public static final String MeasurementResult = _("MeasurementResult");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementValueDouble */
-	public static final String MeasurementValueDouble = _("MeasurementValueDouble");
-
 	/** http://envi.uef.fi/wavellite/wo/entity#Sensor */
 	public static final String Sensor = _("Sensor");
 
