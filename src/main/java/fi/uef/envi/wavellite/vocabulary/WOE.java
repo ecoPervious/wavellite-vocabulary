@@ -51,18 +51,6 @@ public class WOE {
 
 	/** http://envi.uef.fi/wavellite/wo/entity#SpatialRegion */
 	public static final String SpatialRegion = _("SpatialRegion");
-	
-	/** http://envi.uef.fi/wavellite/wo/entity#SpatialGeometry */
-	public static final String SpatialGeometry = _("SpatialGeometry");
-	
-	/** http://envi.uef.fi/wavellite/wo/entity#Point */
-	public static final String Point = _("Point");
-	
-	/** http://envi.uef.fi/wavellite/wo/entity#Polygon */
-	public static final String Polygon = _("Polygon");
-	
-	/** http://envi.uef.fi/wavellite/wo/entity#LineString */
-	public static final String LineString = _("LineString");
 
 	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
@@ -154,10 +142,6 @@ public class WOE {
 		public static final URI SpatialLocation = _uri(WOE.SpatialLocation);
 		public static final URI SpatialPlace = _uri(WOE.SpatialPlace);
 		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
-		public static final URI SpatialGeometry = _uri(WOE.SpatialGeometry);
-		public static final URI Point = _uri(WOE.Point);
-		public static final URI Polygon = _uri(WOE.Polygon);
-		public static final URI LineString = _uri(WOE.LineString);
 		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
 		public static final URI Component = _uri(WOE.Component);
 		public static final URI ComponentPropertyDomain = _uri(WOE.ComponentPropertyDimension);

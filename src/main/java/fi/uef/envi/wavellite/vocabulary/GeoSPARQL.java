@@ -28,6 +28,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 
 public class GeoSPARQL {
 
+	/** http://www.opengis.net/ont/geosparql */
 	public static final String ns = "http://www.opengis.net/ont/geosparql";
 	
 	/** http://www.opengis.net/ont/geosparql#hasGeometry **/

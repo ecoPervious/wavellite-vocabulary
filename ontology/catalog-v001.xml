@@ -5,17 +5,17 @@
     <uri id="Imports Wizard Entry" name="http://vistology.com/ont/2008/STO/STO.owl" uri="http://vistology.com/ont/2008/STO/STO.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="http://purl.oclc.org/NET/ssnx/ssn"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://envi.uef.fi/wavellite/wto" uri="wto.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://sweet.jpl.nasa.gov/2.2/sweetAll.owl" uri="sweet.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://vistology.com/ont/2008/STO/STO.owl" uri="STO.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://vistology.com/onto/STO.owl" uri="STO-v2009.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.opengis.net/ont/gml" uri="gml_32_geometries.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.opengis.net/ont/sf" uri="simple_features_geometries.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.w3.org/2004/02/skos/core" uri="skos.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.w3.org/2006/time" uri="owl-time.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1389342177284" name="http://www.wurvoc.org/vocabularies/om-1.8/" uri="om-1.8.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://envi.uef.fi/wavellite/wto" uri="wo-core-1.0.0.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://sweet.jpl.nasa.gov/2.2/sweetAll.owl" uri="sweet.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://vistology.com/ont/2008/STO/STO.owl" uri="STO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://vistology.com/onto/STO.owl" uri="STO-v2009.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.opengis.net/ont/gml" uri="gml_32_geometries.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.opengis.net/ont/sf" uri="simple_features_geometries.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.w3.org/2004/02/skos/core" uri="skos.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.w3.org/2006/time" uri="owl-time.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1389354165459" name="http://www.wurvoc.org/vocabularies/om-1.8/" uri="om-1.8.owl"/>
     </group>
 </catalog>
