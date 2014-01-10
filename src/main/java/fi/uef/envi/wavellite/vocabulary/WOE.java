@@ -79,12 +79,6 @@ public class WOE {
 	/** http://envi.uef.fi/wavellite/wo/entity#Component */
 	public static final String Component = _("Component");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyDimension */
-	public static final String ComponentPropertyDimension = _("ComponentPropertyDimension");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyMeasure */
-	public static final String ComponentPropertyMeasure = _("ComponentPropertyMeasure");
-
 	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueDouble */
 	public static final String ComponentPropertyValueDouble = _("ComponentPropertyValueDouble");
 
@@ -137,8 +131,6 @@ public class WOE {
 		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
 		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
 		public static final URI Component = _uri(WOE.Component);
-		public static final URI ComponentPropertyDomain = _uri(WOE.ComponentPropertyDimension);
-		public static final URI ComponentPropertyRange = _uri(WOE.ComponentPropertyMeasure);
 		public static final URI ComponentPropertyValueDouble = _uri(WOE.ComponentPropertyValueDouble);
 		public static final URI ComponentPropertyValueInteger = _uri(WOE.ComponentPropertyValueInteger);
 		public static final URI ComponentPropertyValueString = _uri(WOE.ComponentPropertyValueString);
