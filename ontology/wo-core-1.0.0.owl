@@ -25,7 +25,7 @@
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
         <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/wo/core</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
-        <rdfs:comment>The Wavellite task can be described as the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The WTO describes the Wavellite entities that are relevant to this task.</rdfs:comment>
+        <rdfs:comment>The Wavellite core ontology. Wavellite is a modelling and software framework for the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The Wavellite core ontology aligns the upper ontologies used in Wavellite, specifically, DUL, SSN, STO, GeoSPARQL, and OWL-Time.</rdfs:comment>
         <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
