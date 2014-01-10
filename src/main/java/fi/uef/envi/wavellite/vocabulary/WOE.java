@@ -78,24 +78,9 @@ public class WOE {
 
 	/** http://envi.uef.fi/wavellite/wo/entity#Component */
 	public static final String Component = _("Component");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueDouble */
-	public static final String ComponentPropertyValueDouble = _("ComponentPropertyValueDouble");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueInteger */
-	public static final String ComponentPropertyValueInteger = _("ComponentPropertyValueInteger");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueString */
-	public static final String ComponentPropertyValueString = _("ComponentPropertyValueString");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueTemporalLocation */
-	public static final String ComponentPropertyValueTemporalLocation = _("ComponentPropertyValueTemporalLocation");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueSpatialLocation */
-	public static final String ComponentPropertyValueSpatialLocation = _("ComponentPropertyValueSpatialLocation");
-
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValueUri */
-	public static final String ComponentPropertyValueUri = _("ComponentPropertyValueUri");
+	
+	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValue */
+	public static final String ComponentPropertyValue = _("ComponentPropertyValue");
 
 	/** http://envi.uef.fi/wavellite/wo/entity#AttributeValueDouble */
 	public static final String AttributeValueDouble = _("AttributeValueDouble");
@@ -131,12 +116,7 @@ public class WOE {
 		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
 		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
 		public static final URI Component = _uri(WOE.Component);
-		public static final URI ComponentPropertyValueDouble = _uri(WOE.ComponentPropertyValueDouble);
-		public static final URI ComponentPropertyValueInteger = _uri(WOE.ComponentPropertyValueInteger);
-		public static final URI ComponentPropertyValueString = _uri(WOE.ComponentPropertyValueString);
-		public static final URI ComponentPropertyValueTemporalLocation = _uri(WOE.ComponentPropertyValueTemporalLocation);
-		public static final URI ComponentPropertyValueUri = _uri(WOE.ComponentPropertyValueUri);
-		public static final URI ComponentPropertyValueSpatialLocation = _uri(WOE.ComponentPropertyValueSpatialLocation);
+		public static final URI ComponentPropertyValue = _uri(WOE.ComponentPropertyValue);
 		public static final URI AttributeValueDouble = _uri(WOE.AttributeValueDouble);
 		public static final URI AttributeValueTemporalLocation = _uri(WOE.AttributeValueTemporalLocation);
 		public static final URI AttributeValueString = _uri(WOE.AttributeValueString);
