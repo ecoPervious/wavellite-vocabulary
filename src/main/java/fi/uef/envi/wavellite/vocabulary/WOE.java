@@ -72,9 +72,6 @@ public class WOE {
 
 	/** http://envi.uef.fi/wavellite/wo/entity#SensorObservation */
 	public static final String SensorObservation = _("SensorObservation");
-	
-	/** http://envi.uef.fi/wavellite/wo/entity#ObservationValueDouble */
-	public static final String ObservationValueDouble = _("ObservationValueDouble");
 
 	/** http://envi.uef.fi/wavellite/wo/entity#DatasetObservation */
 	public static final String DatasetObservation = _("DatasetObservation");
@@ -132,7 +129,6 @@ public class WOE {
 		public static final URI Property = _uri(WOE.Property);
 		public static final URI Feature = _uri(WOE.Feature);
 		public static final URI SensorObservation = _uri(WOE.SensorObservation);
-		public static final URI ObservationValueDouble = _uri(WOE.ObservationValueDouble);
 		public static final URI TemporalLocation = _uri(WOE.TemporalLocation);
 		public static final URI TimePoint = _uri(WOE.TimePoint);
 		public static final URI TimeInterval = _uri(WOE.TimeInterval);
