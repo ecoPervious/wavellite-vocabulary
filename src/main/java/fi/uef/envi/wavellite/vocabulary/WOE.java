@@ -11,7 +11,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 
 /**
  * <p>
- * Title: WEO
+ * Title: WOE
  * </p>
  * <p>
  * Description: Wavellite Entity Ontology
@@ -26,7 +26,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
  * @author Markus Stocker
  */
 
-public class WEO {
+public class WOE {
 
 	/** http://envi.uef.fi/wavellite/wo/entity */
 	public static final String ns = "http://envi.uef.fi/wavellite/wo/entity";
@@ -143,37 +143,37 @@ public class WEO {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
-		public static final URI Sensor = _uri(WEO.Sensor);
-		public static final URI Property = _uri(WEO.Property);
-		public static final URI Feature = _uri(WEO.Feature);
-		public static final URI SensorObservation = _uri(WEO.SensorObservation);
-		public static final URI ObservationValueDouble = _uri(WEO.ObservationValueDouble);
-		public static final URI TemporalLocation = _uri(WEO.TemporalLocation);
-		public static final URI TimePoint = _uri(WEO.TimePoint);
-		public static final URI TimeInterval = _uri(WEO.TimeInterval);
-		public static final URI SpatialLocation = _uri(WEO.SpatialLocation);
-		public static final URI SpatialPlace = _uri(WEO.SpatialPlace);
-		public static final URI SpatialRegion = _uri(WEO.SpatialRegion);
-		public static final URI SpatialGeometry = _uri(WEO.SpatialGeometry);
-		public static final URI Point = _uri(WEO.Point);
-		public static final URI Polygon = _uri(WEO.Polygon);
-		public static final URI LineString = _uri(WEO.LineString);
-		public static final URI DatasetObservation = _uri(WEO.DatasetObservation);
-		public static final URI Component = _uri(WEO.Component);
-		public static final URI ComponentPropertyDomain = _uri(WEO.ComponentPropertyDimension);
-		public static final URI ComponentPropertyRange = _uri(WEO.ComponentPropertyMeasure);
-		public static final URI ComponentPropertyValueDouble = _uri(WEO.ComponentPropertyValueDouble);
-		public static final URI ComponentPropertyValueInteger = _uri(WEO.ComponentPropertyValueInteger);
-		public static final URI ComponentPropertyValueString = _uri(WEO.ComponentPropertyValueString);
-		public static final URI ComponentPropertyValueTemporalLocation = _uri(WEO.ComponentPropertyValueTemporalLocation);
-		public static final URI ComponentPropertyValueUri = _uri(WEO.ComponentPropertyValueUri);
-		public static final URI ComponentPropertyValueSpatialLocation = _uri(WEO.ComponentPropertyValueSpatialLocation);
-		public static final URI AttributeValueDouble = _uri(WEO.AttributeValueDouble);
-		public static final URI AttributeValueTemporalLocation = _uri(WEO.AttributeValueTemporalLocation);
-		public static final URI AttributeValueString = _uri(WEO.AttributeValueString);
-		public static final URI AttributeValueInteger = _uri(WEO.AttributeValueInteger);
-		public static final URI AttributeValueUri = _uri(WEO.AttributeValueUri);
-		public static final URI AttributeValueSpatialLocation = _uri(WEO.AttributeValueSpatialLocation);
+		public static final URI Sensor = _uri(WOE.Sensor);
+		public static final URI Property = _uri(WOE.Property);
+		public static final URI Feature = _uri(WOE.Feature);
+		public static final URI SensorObservation = _uri(WOE.SensorObservation);
+		public static final URI ObservationValueDouble = _uri(WOE.ObservationValueDouble);
+		public static final URI TemporalLocation = _uri(WOE.TemporalLocation);
+		public static final URI TimePoint = _uri(WOE.TimePoint);
+		public static final URI TimeInterval = _uri(WOE.TimeInterval);
+		public static final URI SpatialLocation = _uri(WOE.SpatialLocation);
+		public static final URI SpatialPlace = _uri(WOE.SpatialPlace);
+		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
+		public static final URI SpatialGeometry = _uri(WOE.SpatialGeometry);
+		public static final URI Point = _uri(WOE.Point);
+		public static final URI Polygon = _uri(WOE.Polygon);
+		public static final URI LineString = _uri(WOE.LineString);
+		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
+		public static final URI Component = _uri(WOE.Component);
+		public static final URI ComponentPropertyDomain = _uri(WOE.ComponentPropertyDimension);
+		public static final URI ComponentPropertyRange = _uri(WOE.ComponentPropertyMeasure);
+		public static final URI ComponentPropertyValueDouble = _uri(WOE.ComponentPropertyValueDouble);
+		public static final URI ComponentPropertyValueInteger = _uri(WOE.ComponentPropertyValueInteger);
+		public static final URI ComponentPropertyValueString = _uri(WOE.ComponentPropertyValueString);
+		public static final URI ComponentPropertyValueTemporalLocation = _uri(WOE.ComponentPropertyValueTemporalLocation);
+		public static final URI ComponentPropertyValueUri = _uri(WOE.ComponentPropertyValueUri);
+		public static final URI ComponentPropertyValueSpatialLocation = _uri(WOE.ComponentPropertyValueSpatialLocation);
+		public static final URI AttributeValueDouble = _uri(WOE.AttributeValueDouble);
+		public static final URI AttributeValueTemporalLocation = _uri(WOE.AttributeValueTemporalLocation);
+		public static final URI AttributeValueString = _uri(WOE.AttributeValueString);
+		public static final URI AttributeValueInteger = _uri(WOE.AttributeValueInteger);
+		public static final URI AttributeValueUri = _uri(WOE.AttributeValueUri);
+		public static final URI AttributeValueSpatialLocation = _uri(WOE.AttributeValueSpatialLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
