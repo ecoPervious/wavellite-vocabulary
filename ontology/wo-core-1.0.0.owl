@@ -19,13 +19,14 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wto">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wo/core">
+        <terms:created rdf:datatype="&xsd;date">2014-01-01</terms:created>
+        <terms:modified rdf:datatype="&xsd;date">2014-01-10</terms:modified>
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
+        <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/wo/core</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
-        <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
-        <terms:created>2014-01-01</terms:created>
-        <dc:identifier>http://envi.uef.fi/wavellite/wto</dc:identifier>
         <rdfs:comment>The Wavellite task can be described as the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The WTO describes the Wavellite entities that are relevant to this task.</rdfs:comment>
+        <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
         <owl:imports rdf:resource="http://vistology.com/ont/2008/STO/STO.owl"/>
@@ -71,6 +72,8 @@
     <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttribute -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttribute">
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -130,6 +133,7 @@
     <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehMeet">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasCommonBoundary"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
@@ -155,6 +159,7 @@
     <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ec">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasCommonBoundary"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
@@ -184,6 +189,15 @@
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#rcc8po -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8po">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8tpp">
@@ -204,6 +218,14 @@
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfCrosses -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfCrosses">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
 
@@ -237,6 +259,7 @@
     <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfTouches">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasCommonBoundary"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
@@ -250,9 +273,19 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#member -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#member">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasMember"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3.org/2006/time#after -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#after">
+        <rdfs:label xml:lang="en">after</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#follows"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
@@ -262,6 +295,8 @@
     <!-- http://www.w3.org/2006/time#before -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#before">
+        <rdfs:label xml:lang="en">before</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#precedes"/>
     </rdf:Description>
@@ -271,6 +306,8 @@
     <!-- http://www.w3.org/2006/time#hasBeginning -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#hasBeginning">
+        <rdfs:label xml:lang="en">has beginning</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#startTime"/>
     </rdf:Description>
     
@@ -279,6 +316,8 @@
     <!-- http://www.w3.org/2006/time#hasDateTimeDescription -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDateTimeDescription">
+        <rdfs:label xml:lang="en">has dateTime description</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -287,6 +326,8 @@
     <!-- http://www.w3.org/2006/time#hasDurationDescription -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDurationDescription">
+        <rdfs:label xml:lang="en">has duration description</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -295,6 +336,8 @@
     <!-- http://www.w3.org/2006/time#hasEnd -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#hasEnd">
+        <rdfs:label xml:lang="en">has end</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#endTime"/>
     </rdf:Description>
     
@@ -303,6 +346,8 @@
     <!-- http://www.w3.org/2006/time#inDateTime -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#inDateTime">
+        <rdfs:label xml:lang="en">in dateTime</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -311,6 +356,8 @@
     <!-- http://www.w3.org/2006/time#inside -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#inside">
+        <rdfs:label xml:lang="en">inside</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -319,6 +366,8 @@
     <!-- http://www.w3.org/2006/time#intervalAfter -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalAfter">
+        <rdfs:label xml:lang="en">interval after</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#after"/>
     </rdf:Description>
     
@@ -327,6 +376,9 @@
     <!-- http://www.w3.org/2006/time#intervalContains -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalContains">
+        <rdfs:label xml:lang="en">interval contains</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -335,7 +387,10 @@
     <!-- http://www.w3.org/2006/time#intervalDuring -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalDuring">
+        <rdfs:label xml:lang="en">interval during</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"/>
     </rdf:Description>
     
 
@@ -343,6 +398,9 @@
     <!-- http://www.w3.org/2006/time#intervalEquals -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalEquals">
+        <rdfs:label xml:lang="en">interval equals</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -351,6 +409,8 @@
     <!-- http://www.w3.org/2006/time#intervalFinishedBy -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalFinishedBy">
+        <rdfs:label xml:lang="en">interval finished by</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -359,6 +419,8 @@
     <!-- http://www.w3.org/2006/time#intervalFinishes -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalFinishes">
+        <rdfs:label xml:lang="en">interval finishes</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -367,7 +429,10 @@
     <!-- http://www.w3.org/2006/time#intervalMeets -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalMeets">
+        <rdfs:label xml:lang="en">interval meets</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
 
@@ -375,7 +440,10 @@
     <!-- http://www.w3.org/2006/time#intervalMetBy -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalMetBy">
+        <rdfs:label xml:lang="en">interval met by</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
     
 
@@ -383,6 +451,8 @@
     <!-- http://www.w3.org/2006/time#intervalOverlappedBy -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalOverlappedBy">
+        <rdfs:label xml:lang="en">interval overlapped by</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -391,7 +461,10 @@
     <!-- http://www.w3.org/2006/time#intervalOverlaps -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalOverlaps">
+        <rdfs:label xml:lang="en">interval overlaps</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
     </rdf:Description>
     
 
@@ -399,6 +472,8 @@
     <!-- http://www.w3.org/2006/time#intervalStartedBy -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalStartedBy">
+        <rdfs:label xml:lang="en">interval started by</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -407,6 +482,18 @@
     <!-- http://www.w3.org/2006/time#intervalStarts -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalStarts">
+        <rdfs:label xml:lang="en">interval starts</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#timeZone -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#timeZone">
+        <rdfs:label xml:lang="en">time zone</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
     </rdf:Description>
     
@@ -434,12 +521,223 @@
     
 
 
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#certainty -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#certainty">
+        <rdfs:label xml:lang="en">certainty</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">STO value is a DUL region. Thus, this datatype property is a sub property of DUL &apos;has region data value&apos;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#coordinateDimension -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#coordinateDimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#dimension -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#dimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isEmpty -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#isEmpty">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isSimple -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#isSimple">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#spatialDimension -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#spatialDimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#day -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#day">
+        <rdfs:label xml:lang="en">day</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dayOfYear -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfYear">
+        <rdfs:label xml:lang="en">day of year</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#days -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#days">
+        <rdfs:label xml:lang="en">days</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hour -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hour">
+        <rdfs:label xml:lang="en">hour</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hours -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hours">
+        <rdfs:label xml:lang="en">hours</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3.org/2006/time#inXSDDateTime -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
         <rdfs:label xml:lang="en">in XSD dateTime</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">This OWL-Time datatype property relates an OWL-Time Instant to an XSD dateTime. Given that OWL-Time Instant is a DUL Region, this datatype property is modelled as a sub property of &apos;has region data value&apos;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minute -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#minute">
+        <rdfs:label xml:lang="en">minute</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#minutes">
+        <rdfs:label xml:lang="en">minutes</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#month -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#month">
+        <rdfs:label xml:lang="en">month</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#months -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#months">
+        <rdfs:label xml:lang="en">months</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#second -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#second">
+        <rdfs:label xml:lang="en">second</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#seconds -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#seconds">
+        <rdfs:label xml:lang="en">seconds</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#week -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#week">
+        <rdfs:label xml:lang="en">week</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#weeks -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#weeks">
+        <rdfs:label xml:lang="en">weeks</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#xsdDateTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#xsdDateTime">
+        <rdfs:label xml:lang="en">XSD dateTime</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#year -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#year">
+        <rdfs:label xml:lang="en">year</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#years -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#years">
+        <rdfs:label xml:lang="en">years</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
     </rdf:Description>
     
@@ -483,7 +781,9 @@
     <!-- http://purl.org/NET/scovo#Dataset -->
 
     <rdf:Description rdf:about="http://purl.org/NET/scovo#Dataset">
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy>http://purl.org/NET/scovo</rdfs:isDefinedBy>
     </rdf:Description>
     
 
@@ -491,7 +791,9 @@
     <!-- http://purl.org/NET/scovo#Item -->
 
     <rdf:Description rdf:about="http://purl.org/NET/scovo#Item">
+        <rdfs:label xml:lang="en">Item</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy>http://purl.org/NET/scovo</rdfs:isDefinedBy>
     </rdf:Description>
     
 
@@ -544,7 +846,9 @@
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Agent -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Agent">
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
         <owl:equivalentClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Agent"/>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     
 
@@ -585,6 +889,15 @@
         <rdfs:label xml:lang="en">Elementary infon</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
         <rdfs:comment xml:lang="en">A STO ElementaryInfon is modelled as a DUL information object. According to the Situation Theory, an elementary infon is a tuple consisting of a relation, relevant objects, and a polarity. </rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Event -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Event">
+        <rdfs:label xml:lang="en">Event</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     
@@ -853,8 +1166,185 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalRelation">
+        <rdfs:label xml:lang="en">focal relation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
+        <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#impliedByRule">
+        <rdfs:label xml:lang="en">implied by rule</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantRelation">
+        <rdfs:label xml:lang="en">relevant relation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par3Type">
+        <rdfs:label xml:lang="en">par3 type</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfWeek">
+        <rdfs:label xml:lang="en">day of week</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#unitType">
+        <rdfs:label xml:lang="en">unit type</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#supportedBySituation">
+        <rdfs:label xml:lang="en">supperted by situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#ProperInterval">
+        <rdfs:label xml:lang="en">Propert interval</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3Inverse">
+        <rdfs:label xml:lang="en">anchor3 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utterance">
+        <rdfs:label xml:lang="en">utterance</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#referringSituation">
+        <rdfs:label xml:lang="en">referring situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Utterance">
+        <rdfs:label xml:lang="en">Utterance</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#polarity">
+        <rdfs:label xml:lang="en">polarity</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#FocalSituation">
+        <rdfs:label xml:lang="en">Focal situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#TYP">
+        <rdfs:label xml:lang="en">TYP</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#resourceSituation">
+        <rdfs:label xml:lang="en">resource situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Year">
+        <rdfs:label xml:lang="en">Year</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor1">
+        <rdfs:label xml:lang="en">anchor1</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:label xml:lang="en">Interval</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relation">
+        <rdfs:label xml:lang="en">relation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2">
+        <rdfs:label xml:lang="en">anchor2</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3">
+        <rdfs:label xml:lang="en">anchor3</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalBefore">
+        <rdfs:label xml:lang="en">interval before</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteredBy">
+        <rdfs:label xml:lang="en">uttered by</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#UtteranceSituation">
+        <rdfs:label xml:lang="en">Utterance situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalIndividual">
+        <rdfs:label xml:lang="en">focal individual</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#supportedInfon">
+        <rdfs:label xml:lang="en">supported infon</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantSituation">
+        <rdfs:label xml:lang="en">relevant situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#query">
+        <rdfs:label xml:lang="en">query</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteranceSituation">
+        <rdfs:label xml:lang="en">utterance situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalSituation">
+        <rdfs:label xml:lang="en">focal situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor1Inverse">
+        <rdfs:label xml:lang="en">anchor1 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Time">
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+        <rdfs:comment xml:lang="en">STO time is an attribute of an object in an infon, i.e. STO individuals. A STO individual may be a DUL physical object, a DUL social object, or a DUL event. Thus, STO time cannot be specialized as a DUL social attribute.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par2Type">
+        <rdfs:label xml:lang="en">par2 type</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#dimensionality">
+        <rdfs:label xml:lang="en">dimensionality</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
+        <rdfs:label xml:lang="en">par1 type</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Polarity">
+        <rdfs:label xml:lang="en">Polarity</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#involves">
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantIndividual">
+        <rdfs:label xml:lang="en">relevant individual</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#January">
+        <rdfs:label xml:lang="en">January</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#PropertyRelation">
         <rdfs:label xml:lang="en">PropertyRelation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#ResourceSituation">
+        <rdfs:label xml:lang="en">Resource situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Sentence">
@@ -862,9 +1352,8 @@
         <rdfs:comment xml:lang="en">STO sentence may be an attribute of both a DUL physical object or a DUL social object.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Time">
-        <rdfs:label xml:lang="en">Time</rdfs:label>
-        <rdfs:comment xml:lang="en">STO time is an attribute of an object in an infon, i.e. STO individuals. A STO individual may be a DUL physical object, a DUL social object, or a DUL event. Thus, STO time cannot be specialized as a DUL social attribute.</rdfs:comment>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual">
+        <rdfs:label xml:lang="en">Relevant individual</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
 </rdf:RDF>
