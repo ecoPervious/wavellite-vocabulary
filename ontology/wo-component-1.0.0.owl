@@ -106,7 +106,7 @@
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAgent"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
         <rdfs:seeAlso>http://www.loa-cnr.it/ontologies/DUL.owl#Agent</rdfs:seeAlso>
-        <rdfs:comment xml:lang="en">A Wavellite component is a computational agent. According to DUL, &quot;a computational agent can be considered as a PhysicalAgent that realizes a certain class of algorithms (that can be considered as instances of InformationObject) that allow to obtain some behaviors that are considered typical of agents in general.&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Wavellite component is a computational agent. According to DUL, &quot;a computational agent can be considered as a PhysicalAgent that realizes a certain class of algorithms (that can be considered as instances of InformationObject) that allow to obtain some behaviors that are considered typical of agents in general.&quot; Hence, we model Wavellite components as DUL physical agents.</rdfs:comment>
     </owl:Class>
     
 
