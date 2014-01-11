@@ -22,6 +22,7 @@
     <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/entity">
         <rdfs:label xml:lang="en">Wavellite entity ontology</rdfs:label>
         <terms:created rdf:datatype="&xsd;date">2014-01-10</terms:created>
+        <terms:modified rdf:datatype="&xsd;date">2014-01-11</terms:modified>
         <dc:identifier>http://envi.uef.fi/wavellite/ontology/entity</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <dc:creator xml:lang="en">Markus Stocker (University of Eastern Finland)</dc:creator>
@@ -94,8 +95,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Wavellite entities may be DUL objects, DUL abstracts, DUL information entities, or STO objects. Thus, we model Wavellite entity as a subclass of DUL entity.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite entities may be DUL objects, DUL abstracts, DUL information entities, or STO objects. Thus, we model Wavellite entity as a subclass of DUL entity.</rdfs:comment>
     </owl:Class>
     
 
@@ -127,8 +128,8 @@
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Situation"/>
         <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
         <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-        <rdfs:comment xml:lang="en">A measurement result is a DUL situation that occurred in the process of measurement.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A measurement result is a DUL situation that occurred in the process of measurement.</rdfs:comment>
     </owl:Class>
     
 
@@ -151,8 +152,8 @@
         <rdfs:label xml:lang="en">Measurement value context</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
-        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">The context of a measurement value is a DUL information object and consists of a WO sensor, property, feature, temporal location, spatial location, and quality.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -189,8 +190,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">Sensor is defined as a Wavellite entity because it may exist as the physical object that made an observation or as a relevant individual in a situation.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -291,7 +292,9 @@
 
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Situation -->
 
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation">
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
