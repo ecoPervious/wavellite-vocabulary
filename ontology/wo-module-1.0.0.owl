@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY module "http://envi.uef.fi/wavellite/ontology/module#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/ontology/module#"
+     xml:base="http://envi.uef.fi/wavellite/ontology/module"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:module="http://envi.uef.fi/wavellite/ontology/module#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/module">
+        <rdfs:label xml:lang="en">Wavellite module ontology</rdfs:label>
+        <terms:created rdf:datatype="&xsd;date">2014-01-11</terms:created>
+        <terms:creator>Markus Stocker (University of Eastern Finland)</terms:creator>
+        <rdfs:comment xml:lang="en">The Wavellite module ontology. It builds on the Wavellite operator ontology and defines all Wavellite modules, i.e. some of the computational agents of the Wavellite architecture, namely the modules (processing, learning, and store).</rdfs:comment>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/operator"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#hasConsidered -->
+
+    <owl:ObjectProperty rdf:about="&module;hasConsidered">
+        <rdfs:label xml:lang="en">has considered</rdfs:label>
+        <rdfs:comment xml:lang="en">The Wavellite object property that relates modules to their considered Wavellite entities, specifically measurement results, sensor observations, or dataset observations.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&module;Module"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#isOperatedBy -->
+
+    <owl:ObjectProperty rdf:about="&module;isOperatedBy">
+        <rdfs:label xml:lang="en">is operated by</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The Wavellite object property that relates operators with modules.</rdfs:comment>
+        <rdfs:range rdf:resource="&module;Module"/>
+        <owl:inverseOf rdf:resource="&module;operates"/>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#operates -->
+
+    <owl:ObjectProperty rdf:about="&module;operates">
+        <rdfs:label xml:lang="en">operates</rdfs:label>
+        <rdfs:isDefinedBy xml:lang="en">The Wavellite object property that relates modules with operators.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&module;Module"/>
+        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#LearningModule -->
+
+    <owl:Class rdf:about="&module;LearningModule">
+        <rdfs:label xml:lang="en">Learning module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&module;Module"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&module;hasConsidered"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&module;ProcessingModule"/>
+        <owl:disjointWith rdf:resource="&module;StoreModule"/>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite learning module learns Wavellite entities from Wavellite entities. Specifically, learning modules typically aim at learning situations from dataset observations. Learning modules typically operate one or more Wavellite operators.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#Module -->
+
+    <owl:Class rdf:about="&module;Module">
+        <rdfs:label xml:lang="en">Module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&module;operates"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&module;hasConsidered"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                            <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+        <rdfs:comment xml:lang="en">A Wavellite module is a computational agent. According to DUL, &quot;a computational agent can be considered as a PhysicalAgent that realizes a certain class of algorithms (that can be considered as instances of InformationObject) that allow to obtain some behaviors that are considered typical of agents in general.&quot; Hence, we model Wavellite modules as DUL physical agents. Modules are generally said to &apos;consider&apos; Wavellite entities. They operate on Wavellite entities they are told to consider. The result of consideration are Wavellite entities, which are retrievable by clients of Wavellite modules. Wavellite components are typically the clients of Wavellite modules. In contrast to operators, Wavellite modules are meant to be extended by Wavellite applications. For instance, a learning module required by a specific Wavellite application implements the corresponding program logic required to learn situations from datasets. Such a module may use one or more operators in its implementation.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#ProcessingModule -->
+
+    <owl:Class rdf:about="&module;ProcessingModule">
+        <rdfs:label xml:lang="en">Processing module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&module;Module"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&module;hasConsidered"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                            <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&module;StoreModule"/>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite processing module processes Wavellite entities into Wavellite entities. Specifically, processing modules typically process sensor observations and dataset observations. Processing modules typically operate one or more Wavellite operators.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#StoreModule -->
+
+    <owl:Class rdf:about="&module;StoreModule">
+        <rdfs:label xml:lang="en">Store module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&module;Module"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&module;hasConsidered"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+                            <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                            <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite store module persists Wavellite entities to a knowledge base. Specificially, persisted entities include sensor observations, dataset observations, and situations. A store module implementation is for a specific knowledge base, e.g. the Stardog RDF database.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#Operator -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#10d71027-3c1a-4dc8-be29-39118ee94758 -->
+
+    <owl:NamedIndividual rdf:about="&module;10d71027-3c1a-4dc8-be29-39118ee94758">
+        <rdf:type rdf:resource="&module;StoreModule"/>
+        <rdfs:label xml:lang="en">The file Wavellite store module</rdfs:label>
+        <rdfs:comment xml:lang="en">The Wavellite store module implementation for file-based knowledge stores.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#5833f15f-bc6c-4f42-83aa-b0dd0848ba77 -->
+
+    <owl:NamedIndividual rdf:about="&module;5833f15f-bc6c-4f42-83aa-b0dd0848ba77">
+        <rdf:type rdf:resource="&module;ProcessingModule"/>
+        <rdfs:label xml:lang="en">The measurement result Wavellite processing module</rdfs:label>
+        <rdfs:comment xml:lang="en">The default implementation for the Wavellite processing module that processes measurement results. This module operates the base Wavellite measurement result translator.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <operates rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#575f901c-4e5c-4ff9-93db-b0bc6e759d49"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/module#f5fa32c5-333b-417f-831f-2b70dd150ebd -->
+
+    <owl:NamedIndividual rdf:about="&module;f5fa32c5-333b-417f-831f-2b70dd150ebd">
+        <rdf:type rdf:resource="&module;StoreModule"/>
+        <rdfs:label xml:lang="en">The Stardog Wavellite store module</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/module</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The Wavellite store module implementation for the Stardog RDF database.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#575f901c-4e5c-4ff9-93db-b0bc6e759d49 -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/operator#575f901c-4e5c-4ff9-93db-b0bc6e759d49">
+        <isOperatedBy rdf:resource="&module;5833f15f-bc6c-4f42-83aa-b0dd0848ba77"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
