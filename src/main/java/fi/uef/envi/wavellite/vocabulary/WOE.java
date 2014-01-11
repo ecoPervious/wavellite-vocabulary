@@ -28,61 +28,61 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 
 public class WOE {
 
-	/** http://envi.uef.fi/wavellite/wo/entity */
-	public static final String ns = "http://envi.uef.fi/wavellite/wo/entity";
+	/** http://envi.uef.fi/wavellite/ontology/entity */
+	public static final String ns = "http://envi.uef.fi/wavellite/ontology/entity";
 
-	/** http://envi.uef.fi/wavellite/wo/entity#Entity */
+	/** http://envi.uef.fi/wavellite/ontology/entity#Entity */
 	public static final String Entity = _("Entity");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#TemporalLocation */
+	/** http://envi.uef.fi/wavellite/ontology/entity#TemporalLocation */
 	public static final String TemporalLocation = _("TemporalLocation");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#TimePoint */
+	/** http://envi.uef.fi/wavellite/ontology/entity#TimePoint */
 	public static final String TimePoint = _("TimePoint");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#TimeInterval */
+	/** http://envi.uef.fi/wavellite/ontology/entity#TimeInterval */
 	public static final String TimeInterval = _("TimeInterval");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#SpatialLocation */
+	/** http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation */
 	public static final String SpatialLocation = _("SpatialLocation");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#SpatialPlace */
+	/** http://envi.uef.fi/wavellite/ontology/entity#SpatialPlace */
 	public static final String SpatialPlace = _("SpatialPlace");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#SpatialRegion */
+	/** http://envi.uef.fi/wavellite/ontology/entity#SpatialRegion */
 	public static final String SpatialRegion = _("SpatialRegion");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementValue */
+	/** http://envi.uef.fi/wavellite/ontology/entity#MeasurementValue */
 	public static final String MeasurementValue = _("MeasurementValue");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementValueContext */
+	/** http://envi.uef.fi/wavellite/ontology/entity#MeasurementValueContext */
 	public static final String MeasurementValueContext = _("MeasurementValueContext");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#MeasurementResult */
+	/** http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult */
 	public static final String MeasurementResult = _("MeasurementResult");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#Sensor */
+	/** http://envi.uef.fi/wavellite/ontology/entity#Sensor */
 	public static final String Sensor = _("Sensor");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#Feature */
+	/** http://envi.uef.fi/wavellite/ontology/entity#Feature */
 	public static final String Feature = _("Feature");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#Property */
+	/** http://envi.uef.fi/wavellite/ontology/entity#Property */
 	public static final String Property = _("Property");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#SensorObservation */
+	/** http://envi.uef.fi/wavellite/ontology/entity#SensorObservation */
 	public static final String SensorObservation = _("SensorObservation");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#DatasetObservation */
+	/** http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation */
 	public static final String DatasetObservation = _("DatasetObservation");
 
-	/** http://envi.uef.fi/wavellite/wo/entity#Component */
+	/** http://envi.uef.fi/wavellite/ontology/entity#Component */
 	public static final String Component = _("Component");
 	
-	/** http://envi.uef.fi/wavellite/wo/entity#ComponentPropertyValue */
+	/** http://envi.uef.fi/wavellite/ontology/entity#ComponentPropertyValue */
 	public static final String ComponentPropertyValue = _("ComponentPropertyValue");
 	
-	/** http://envi.uef.fi/wavellite/wo/entity#RelevantObject */
+	/** http://envi.uef.fi/wavellite/ontology/entity#RelevantObject */
 	public static final String RelevantObject = _("RelevantObject");
 
 	public static class asURI {
