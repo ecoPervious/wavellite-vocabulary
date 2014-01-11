@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/ontology/component#"
+     xml:base="http://envi.uef.fi/wavellite/ontology/component"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/component">
+        <rdfs:label xml:lang="en">Wavellite component ontology</rdfs:label>
+        <terms:creator>Markus Stocker (University of Eastern Finland)</terms:creator>
+        <terms:created>2014-01-11</terms:created>
+        <rdfs:comment xml:lang="en">The Wavellite component ontology. It builds on the Wavellite entity ontology and defines all Wavellite components, i.e. some of the computational agents of the Wavellite architecture, namely the components (engines, readers, and writers).</rdfs:comment>
+        <dc:identifier>http://envi.uef.fi/wavellite/ontology/component</dc:identifier>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/entity"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#hasEmitted -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/component#hasEmitted">
+        <rdfs:label xml:lang="en">has emitted</rdfs:label>
+        <rdfs:comment xml:lang="en">Wavellite object property that relates Wavellite components with the DUL social objects emitted by them (either measurement results, sensor observations, dataset observations, or situations).</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#hasExecuted -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/component#hasExecuted">
+        <rdfs:label xml:lang="en">has executed</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite object property that relates Wavellite components with the DUL social objects executed by them (either measurement results, sensor observations, dataset observations, or situations).</rdfs:comment>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#Component -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#Component">
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAgent"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:seeAlso>http://www.loa-cnr.it/ontologies/DUL.owl#Agent</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A Wavellite component is a computational agent. According to DUL, &quot;a computational agent can be considered as a PhysicalAgent that realizes a certain class of algorithms (that can be considered as instances of InformationObject) that allow to obtain some behaviors that are considered typical of agents in general.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DatasetEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#DatasetEngine">
+        <rdfs:label xml:lang="en">Dataset engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Engine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite dataset engines execute sensor observations and emit dataset observations. They are components at the derivation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationEngine">
+        <rdfs:label xml:lang="en">Derivation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Engine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite derivation engines execute dataset observations and emit dataset observations. They are components at the derivation layer of the Wavellite architecture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationReader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationReader">
+        <rdfs:label xml:lang="en">Derivation reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Reader"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite derivation readers emit dataset observations. They are components at the derivation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationWriter">
+        <rdfs:label xml:lang="en">Derivation writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Writer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite derivation writers execute dataset observations. They are components at the derivation layer of the Wavellite architecture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#Engine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#Engine">
+        <rdfs:label xml:lang="en">Engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Reader"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Writer"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#MeasurementEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#MeasurementEngine">
+        <rdfs:label xml:lang="en">Measurement engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Engine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite measurement engines emit measurement results. They are components at the measurement layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationEngine">
+        <rdfs:label xml:lang="en">Observation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Engine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite observation engines execute measurement results and emit sensor observations. They are components at the observation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationReader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationReader">
+        <rdfs:label xml:lang="en">Observation reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Reader"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite observation readers emit sensor observations. They are components at the observation layer of the Wavellite architecture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationWriter">
+        <rdfs:label xml:lang="en">Observation writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Writer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite observation writers execute sensor observations. They are components at the observation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#Reader -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#Reader">
+        <rdfs:label xml:lang="en">Reader</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Writer"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#SituationEngine -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#SituationEngine">
+        <rdfs:label xml:lang="en">Situation engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Engine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Wavellite situation engines execute dataset observations and emit situations. They are components at the situation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#SituationWriter -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#SituationWriter">
+        <rdfs:label xml:lang="en">Situation writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Writer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasEmitted"/>
+                <owl:onClass rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/component#hasExecuted"/>
+                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Wavellite situation writers execute situations. They are components at the situation layer of the Wavellite architecture.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#Writer -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/component#Writer">
+        <rdfs:label xml:lang="en">Writer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/component</rdfs:isDefinedBy>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
