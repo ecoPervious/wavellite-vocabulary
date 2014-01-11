@@ -11,8 +11,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://envi.uef.fi/wavellite/wto#"
-     xml:base="http://envi.uef.fi/wavellite/wto"
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/ontology/core#"
+     xml:base="http://envi.uef.fi/wavellite/ontology/core"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
