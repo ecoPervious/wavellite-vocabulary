@@ -26,7 +26,7 @@
         <rdfs:comment xml:lang="en">The Wavellite component ontology. It builds on the Wavellite entity ontology and defines all Wavellite components, i.e. some of the computational agents of the Wavellite architecture, namely the components (engines, readers, and writers).</rdfs:comment>
         <dc:identifier>http://envi.uef.fi/wavellite/ontology/component</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
-        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/entity"/>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/module"/>
     </owl:Ontology>
     
 
