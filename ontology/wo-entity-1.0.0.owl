@@ -23,6 +23,7 @@
         <rdfs:label xml:lang="en">Wavellite entity ontology</rdfs:label>
         <terms:created rdf:datatype="&xsd;date">2014-01-10</terms:created>
         <terms:modified rdf:datatype="&xsd;date">2014-01-11</terms:modified>
+        <terms:modified rdf:datatype="&xsd;date">2014-01-12</terms:modified>
         <dc:identifier>http://envi.uef.fi/wavellite/ontology/entity</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <dc:creator xml:lang="en">Markus Stocker (University of Eastern Finland)</dc:creator>
@@ -74,7 +75,7 @@
         <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
         <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
         <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
-        <rdfs:isDefinedBy xml:lang="en">A Wavellite dataset observation is equivalent to a QB observation. The entity is defined in Wavellite in order to distinguish it from SSN observations.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite dataset observation is equivalent to a QB observation. The entity is defined in Wavellite in order to distinguish it from SSN observations. It is modelled as a DUL information object. This is in contrast to sensor observations and situations, which are DUL social objects, specifically DUL situations.</rdfs:isDefinedBy>
         <rdfs:isDefinedBy xml:lang="en">http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -129,7 +130,7 @@
         <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
         <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
-        <rdfs:comment xml:lang="en">A measurement result is a DUL situation that occurred in the process of measurement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A measurement result is a DUL situation that occurred in the process of measurement. Measurement results are modelled according to SSN observations as DUL situations.</rdfs:comment>
     </owl:Class>
     
 
@@ -204,7 +205,7 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
         <rdfs:comment>http://envi.uef.fi/wavellite/ontology/entity</rdfs:comment>
-        <rdfs:comment xml:lang="en">A Wavellite sensor observation is equivalent to a SSN observation. The entity is defined in Wavellite in order to distinguish it from QB (dataset) observations.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Wavellite sensor observation is equivalent to a SSN observation, and is, thus, a DUL situation. The entity is defined in Wavellite in order to distinguish it from QB (dataset) observations.</rdfs:comment>
     </owl:Class>
     
 
@@ -294,6 +295,7 @@
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation">
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
+        <rdfs:comment xml:lang="en">Following the modelling of SSN observations as DUL situations, we model STO situations as DUL situations. Hence, a STO situation is &quot;a view, consistent with a description, on a set of entities.&quot;</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
