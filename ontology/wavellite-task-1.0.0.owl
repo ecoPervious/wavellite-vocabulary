@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/ontology/task#"
+     xml:base="http://envi.uef.fi/wavellite/ontology/task"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/task">
+        <rdfs:label xml:lang="en">Wavellite task ontology</rdfs:label>
+        <dc:identifier>http://envi.uef.fi/wavellite/ontology/task</dc:identifier>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <terms:created xml:lang="en">2014-01-11</terms:created>
+        <terms:creator xml:lang="en">Markus Stocker (University of Eastern Finland)</terms:creator>
+        <rdfs:comment xml:lang="en">The Wavellite task ontology. It builds on the Wavellite component ontology and allows for the description of Wavellite tasks. Wavellite task is the acquisition and representation of situational knowledge from sensor data for environmental phenomena. It aims at situation awareness in environmental monitoring.</rdfs:comment>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/component"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy">
+        <rdfs:label xml:lang="en">is performed by</rdfs:label>
+        <rdfs:comment xml:lang="en">Object property that relates Wavellite atomic tasks with components. Atomic tasks are said to be executed by components.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <owl:inverseOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#performs -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/task#performs">
+        <rdfs:label xml:lang="en">performs</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Object property that relates Wavellite atomic tasks with components. Components are said to &apos;execute&apos; atomic tasks.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+        <rdfs:range rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#Component -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DatasetEngine -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#DatasetEngine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationTranslation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationEngine -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationEngine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationReader -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationReader">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#DerivationWriter -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#DerivationWriter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#MeasurementEngine -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#MeasurementEngine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationEngine -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationEngine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultTranslation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationReader -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationReader">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#ObservationWriter -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#ObservationWriter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#SituationEngine -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#SituationEngine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SituationRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/component#SituationWriter -->
+
+    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/component#SituationWriter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#performs"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SituationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#AtomicTask -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#AtomicTask">
+        <rdfs:label xml:lang="en">Atomic task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SimpleTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/task#CompositeTask"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Atomic tasks are executed by Wavellite components. We introduce this task hierarchy following Tran and Tsuji, ICWS 2007.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#ComplexTask -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#ComplexTask">
+        <rdfs:label xml:lang="en">Complex task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Task"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SimpleTask"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">We introduce this task hierarchy following Tran and Tsuji, ICWS 2007.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#CompositeTask -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#CompositeTask">
+        <rdfs:label xml:lang="en">Composite task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SimpleTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A composite task has constitutes, specifically some atomic tasks. This is perhaps too restrictive but it serves Wavellite, because composite Wavellite tasks only have atomic tasks as constitutents. We introduce this task hierarchy following Tran and Tsuji, ICWS 2007.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#DataAcquisition -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#DataAcquisition">
+        <rdfs:label xml:lang="en">Data acquisition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#CompositeTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The task of data acquisition involves one or more measurement engines which acquire sensor data from data sources (e.g. sensing devices, databases, distributed systems), process sensor data to measurement results and emit measurement results. Data acquisition may occur also at the observation and derivation layers of the Wavellite architecture by means of observation readers and derivation readers, respectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#DataProcessing -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#DataProcessing">
+        <rdfs:label xml:lang="en">Data processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#CompositeTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationTranslation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SensorObservationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultTranslation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The task of data processing is a composite task consisting of several atomic tasks, including translation, processing, and persistence of measurement results, sensor observations, and dataset observations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#DatasetObservationAcquisition -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationAcquisition">
+        <rdfs:label xml:lang="en">Dataset observation acquisition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#DerivationReader"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#DatasetObservationPersistence -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationPersistence">
+        <rdfs:label xml:lang="en">Dataset observation persistence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#DerivationWriter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#DatasetObservationProcessing -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#DatasetObservationProcessing">
+        <rdfs:label xml:lang="en">Dataset observation processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#DerivationEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#KnowledgeRepresentation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#KnowledgeRepresentation">
+        <rdfs:label xml:lang="en">Knowledge representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#CompositeTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SituationPersistence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#SituationRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">This composite task includes situational knowledge acquisition, representation, and persistence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#MeasurementResultAcquisition -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultAcquisition">
+        <rdfs:label xml:lang="en">Measurement result acquisition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#MeasurementEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#MeasurementResultTranslation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#MeasurementResultTranslation">
+        <rdfs:label xml:lang="en">Measurement result translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#ObservationEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SensorObservationAcquisition -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SensorObservationAcquisition">
+        <rdfs:label xml:lang="en">Sensor observation acquisition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#ObservationReader"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SensorObservationPersistence -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SensorObservationPersistence">
+        <rdfs:label xml:lang="en">Sensor observation persistence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#ObservationWriter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SensorObservationTranslation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SensorObservationTranslation">
+        <rdfs:label xml:lang="en">Sensor observation translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#DatasetEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SimpleTask -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SimpleTask">
+        <rdfs:label xml:lang="en">Simple task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Task"/>
+        <rdfs:comment xml:lang="en">We introduce this task hierarchy following Tran and Tsuji, ICWS 2007.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SituationPersistence -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SituationPersistence">
+        <rdfs:label xml:lang="en">Situation persistence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#SituationWriter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#SituationRepresentation -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#SituationRepresentation">
+        <rdfs:label xml:lang="en">Situation representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#AtomicTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/task#isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/component#SituationEngine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">This atomic task includes situation acquisition and representation. This task could perhaps be understood as composite but it is executed by a single component, namely the situation engine. Hence, we model it as an atomic task. Another way to see it is that situations are not acquired, knowledge is acquired. This knowedge is represented as situations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/task#WavelliteTask -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/task#WavelliteTask">
+        <rdfs:label xml:lang="en">Wavellite task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/task#ComplexTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DataProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#DataAcquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/task#KnowledgeRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Wavellite task is described as the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The term acquisition is used here because SSN sensor is broad and may include people, in addition to devices. Furthermore, in modelling, Wavellite applications rely on domain experts, e.g. physicists. For instance, domain experts may be required in order to model specific environmental phenomena. Thus, we speak of acquisition, which includes the more narrow &apos;extraction&apos;, typically used for computational agents that extract information from data.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/task</rdfs:isDefinedBy>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
