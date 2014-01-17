@@ -24,6 +24,7 @@
         <terms:created rdf:datatype="&xsd;date">2014-01-10</terms:created>
         <terms:modified rdf:datatype="&xsd;date">2014-01-11</terms:modified>
         <terms:modified rdf:datatype="&xsd;date">2014-01-12</terms:modified>
+        <terms:modified rdf:datatype="&xsd;date">2014-01-17</terms:modified>
         <dc:identifier>http://envi.uef.fi/wavellite/ontology/entity</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <dc:creator xml:lang="en">Markus Stocker (University of Eastern Finland)</dc:creator>
@@ -215,9 +216,10 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation">
         <rdfs:label xml:lang="en">Spatial location</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Location"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Spatial location is modelled as a STO attribute in order to meet the semantics of STO as spatial locations are objects in infons.</rdfs:comment>
     </owl:Class>
     
 
@@ -227,8 +229,7 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SpatialPlace">
         <rdfs:label xml:lang="en">Spatial place</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAttribute"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -250,8 +251,9 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#TemporalLocation">
         <rdfs:label xml:lang="en">Temporal location</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Time"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">Temporal location is modelled as a STO attribute in order to meet the semantics of STO as temporal locations are objects in infons.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     

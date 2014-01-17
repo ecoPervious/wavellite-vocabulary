@@ -22,6 +22,7 @@
     <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wo/core">
         <terms:created rdf:datatype="&xsd;date">2014-01-01</terms:created>
         <terms:modified rdf:datatype="&xsd;date">2014-01-10</terms:modified>
+        <terms:modified rdf:datatype="&xsd;date">2014-01-17</terms:modified>
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
         <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/wo/core</dc:identifier>
         <rdfs:comment>The Wavellite core ontology. Wavellite is a modelling and software framework for the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The Wavellite core ontology aligns the upper ontologies used in Wavellite, specifically, DUL, SSN, STO, GeoSPARQL, and OWL-Time.</rdfs:comment>
@@ -922,17 +923,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#Location -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Location">
-        <rdfs:label xml:lang="en">Location</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAttribute"/>
-        <rdfs:comment xml:lang="en">STO location is a DUL physical attribute because location is a physical value of a physical object.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Object -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object">
@@ -1325,6 +1315,11 @@
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#dimensionality">
         <rdfs:label xml:lang="en">dimensionality</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Location">
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:comment xml:lang="en">STO location is a DUL physical attribute because location is a physical value of a physical object.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
         <rdfs:label xml:lang="en">par1 type</rdfs:label>
