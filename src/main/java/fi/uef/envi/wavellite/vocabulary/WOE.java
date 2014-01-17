@@ -81,9 +81,6 @@ public class WOE {
 	
 	/** http://envi.uef.fi/wavellite/ontology/entity#ComponentPropertyValue */
 	public static final String ComponentPropertyValue = _("ComponentPropertyValue");
-	
-	/** http://envi.uef.fi/wavellite/ontology/entity#RelevantObject */
-	public static final String RelevantObject = _("RelevantObject");
 
 	public static class asURI {
 
