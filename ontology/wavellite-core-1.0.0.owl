@@ -1200,7 +1200,7 @@
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#ProperInterval">
-        <rdfs:label xml:lang="en">Propert interval</rdfs:label>
+        <rdfs:label xml:lang="en">Proper interval</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3Inverse">
@@ -1219,16 +1219,16 @@
         <rdfs:label xml:lang="en">Utterance</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#polarity">
-        <rdfs:label xml:lang="en">polarity</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#FocalSituation">
         <rdfs:label xml:lang="en">Focal situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#TYP">
         <rdfs:label xml:lang="en">TYP</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#polarity">
+        <rdfs:label xml:lang="en">polarity</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#resourceSituation">

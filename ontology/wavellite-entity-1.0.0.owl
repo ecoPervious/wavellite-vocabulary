@@ -264,7 +264,15 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#TimeInterval">
         <rdfs:label xml:lang="en">Time interval</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#TemporalLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#ProperInterval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
