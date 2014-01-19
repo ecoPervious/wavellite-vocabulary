@@ -273,6 +273,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Time interval must be a subclass of OWL-Time interval and may be OWL-Time proper interval or a OWL-Time date time interval. This is to avoid the restrictions that OWL-Time poses on proper and date time intervals.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -307,6 +308,8 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <rdfs:comment xml:lang="en">Following the modelling of SSN observations as DUL situations, we model STO situations as DUL situations. Hence, a STO situation is &quot;a view, consistent with a description, on a set of entities.&quot;</rdfs:comment>
     </rdf:Description>
+    
+
 </rdf:RDF>
 
 

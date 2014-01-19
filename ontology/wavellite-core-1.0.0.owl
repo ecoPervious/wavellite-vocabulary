@@ -19,15 +19,15 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/wo/core">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/core">
         <terms:created rdf:datatype="&xsd;date">2014-01-01</terms:created>
         <terms:modified rdf:datatype="&xsd;date">2014-01-10</terms:modified>
         <terms:modified rdf:datatype="&xsd;date">2014-01-17</terms:modified>
         <dc:creator rdf:datatype="&xsd;string">Markus Stocker (University of Eastern Finland)</dc:creator>
-        <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/wo/core</dc:identifier>
-        <rdfs:comment>The Wavellite core ontology. Wavellite is a modelling and software framework for the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The Wavellite core ontology aligns the upper ontologies used in Wavellite, specifically, DUL, SSN, STO, GeoSPARQL, and OWL-Time.</rdfs:comment>
+        <dc:identifier rdf:datatype="&xsd;anyURI">http://envi.uef.fi/wavellite/ontology/core</dc:identifier>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <rdfs:seeAlso>http://www.uef.fi/en/envi/projects/wavellite</rdfs:seeAlso>
+        <rdfs:comment>The Wavellite core ontology. Wavellite is a modelling and software framework for the acquisition and representation of situational knowledge from sensor data for environmental phenomena. The Wavellite core ontology aligns the upper ontologies used in Wavellite, specifically, DUL, SSN, STO, GeoSPARQL, and OWL-Time.</rdfs:comment>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
         <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
         <owl:imports rdf:resource="http://vistology.com/ont/2008/STO/STO.owl"/>
@@ -1163,6 +1163,20 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ProperInterval -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#ProperInterval">
+        <rdfs:comment xml:lang="en">Proper intervals are intervals whose beginning and end are different. An OWL-Time interval may have same beginning and end, in which case it is also an OWL-Time Instant. Thus, a OWL-Time proper interval is disjoint with OWL-Time instant.</rdfs:comment>
+    </rdf:Description>
+    
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalRelation">
         <rdfs:label xml:lang="en">focal relation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
