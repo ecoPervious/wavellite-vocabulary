@@ -885,25 +885,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#Individual -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Individual">
-        <rdfs:label xml:lang="en">Individual</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A STO Individual may be a DUL physical object or a DUL social object.</rdfs:comment>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Object -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object">
@@ -934,6 +915,24 @@
         <rdfs:comment xml:lang="en">A STO relation is modelled as an DUL abstract entity, as a relation (e.g. velocity) is not located in time-space. Specifically, we model STO relations as DUL formal entities.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
         <rdfs:seeAlso>http://www.loa-cnr.it/ontologies/DUL.owl#Relation</rdfs:seeAlso>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual">
+        <rdfs:label xml:lang="en">Relevant individual</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#SocialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     
 
@@ -1187,6 +1186,11 @@
         <rdfs:label xml:lang="en">uttered by</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Individual">
+        <rdfs:label xml:lang="en">Individual</rdfs:label>
+        <rdfs:comment xml:lang="en">A STO Individual may be a DUL physical object or a DUL social object.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
         <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
         <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
@@ -1211,10 +1215,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#PropertyRelation">
         <rdfs:label xml:lang="en">PropertyRelation</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual">
-        <rdfs:label xml:lang="en">Relevant individual</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantRelation">
