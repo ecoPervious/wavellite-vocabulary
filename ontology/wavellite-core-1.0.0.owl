@@ -854,17 +854,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#Attribute -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Attribute">
-        <rdfs:label xml:lang="en">Attribute</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-        <rdfs:comment xml:lang="en">STO Attribute is modelled as a Region and may be a DUL physical attribute or a DUL social attribute.</rdfs:comment>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Dimensionality -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Dimensionality">
@@ -920,14 +909,6 @@
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object">
         <rdfs:label xml:lang="en">Object</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A STO object can be a DUL object, a DUL abstract, or a DUL event. These classes are disjoint; hence, the chosen modelling. A STO object may be a DUL event because a STO individual may be a DUL event.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
@@ -1158,25 +1139,21 @@
         <rdfs:label xml:lang="en">focal relation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
-        <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#impliedByRule">
         <rdfs:label xml:lang="en">implied by rule</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantRelation">
-        <rdfs:label xml:lang="en">relevant relation</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par3Type">
-        <rdfs:label xml:lang="en">par3 type</rdfs:label>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
+        <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfWeek">
         <rdfs:label xml:lang="en">day of week</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par3Type">
+        <rdfs:label xml:lang="en">par3 type</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#unitType">
         <rdfs:label xml:lang="en">unit type</rdfs:label>
@@ -1185,6 +1162,64 @@
     <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:label xml:lang="en">Instant</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3Inverse">
+        <rdfs:label xml:lang="en">anchor3 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#referringSituation">
+        <rdfs:label xml:lang="en">referring situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#polarity">
+        <rdfs:label xml:lang="en">polarity</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#TYP">
+        <rdfs:label xml:lang="en">TYP</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relation">
+        <rdfs:label xml:lang="en">relation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteredBy">
+        <rdfs:label xml:lang="en">uttered by</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
+        <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
+        <rdfs:label xml:lang="en">par1 type</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Location">
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:comment xml:lang="en">STO location is a DUL physical attribute because location is a physical value of a physical object.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Polarity">
+        <rdfs:label xml:lang="en">Polarity</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#involves">
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#PropertyRelation">
+        <rdfs:label xml:lang="en">PropertyRelation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual">
+        <rdfs:label xml:lang="en">Relevant individual</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantRelation">
+        <rdfs:label xml:lang="en">relevant relation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#supportedBySituation">
         <rdfs:label xml:lang="en">supperted by situation</rdfs:label>
@@ -1195,16 +1230,13 @@
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">Proper intervals are intervals whose beginning and end are different. An OWL-Time interval may have same beginning and end, in which case it is also an OWL-Time Instant. Thus, a OWL-Time proper interval is disjoint with OWL-Time instant.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3Inverse">
-        <rdfs:label xml:lang="en">anchor3 inverse</rdfs:label>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Attribute">
+        <rdfs:label xml:lang="en">Attribute</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utterance">
         <rdfs:label xml:lang="en">utterance</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#referringSituation">
-        <rdfs:label xml:lang="en">referring situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Utterance">
@@ -1215,37 +1247,25 @@
         <rdfs:label xml:lang="en">Focal situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#TYP">
-        <rdfs:label xml:lang="en">TYP</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#polarity">
-        <rdfs:label xml:lang="en">polarity</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#resourceSituation">
         <rdfs:label xml:lang="en">resource situation</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor1">
+        <rdfs:label xml:lang="en">anchor1</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#Year">
         <rdfs:label xml:lang="en">Year</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor1">
-        <rdfs:label xml:lang="en">anchor1</rdfs:label>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2">
+        <rdfs:label xml:lang="en">anchor2</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#Interval">
         <rdfs:label xml:lang="en">Interval</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relation">
-        <rdfs:label xml:lang="en">relation</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2">
-        <rdfs:label xml:lang="en">anchor2</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3">
         <rdfs:label xml:lang="en">anchor3</rdfs:label>
@@ -1254,10 +1274,6 @@
     <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalBefore">
         <rdfs:label xml:lang="en">interval before</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteredBy">
-        <rdfs:label xml:lang="en">uttered by</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#UtteranceSituation">
         <rdfs:label xml:lang="en">Utterance situation</rdfs:label>
@@ -1271,11 +1287,6 @@
         <rdfs:label xml:lang="en">supported infon</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
-        <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
-        <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
-        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantSituation">
         <rdfs:label xml:lang="en">relevant situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
@@ -1288,12 +1299,12 @@
         <rdfs:label xml:lang="en">utterance situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalSituation">
-        <rdfs:label xml:lang="en">focal situation</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor1Inverse">
         <rdfs:label xml:lang="en">anchor1 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#focalSituation">
+        <rdfs:label xml:lang="en">focal situation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Time">
@@ -1309,33 +1320,12 @@
         <rdfs:label xml:lang="en">dimensionality</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Location">
-        <rdfs:label xml:lang="en">Location</rdfs:label>
-        <rdfs:comment xml:lang="en">STO location is a DUL physical attribute because location is a physical value of a physical object.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
-        <rdfs:label xml:lang="en">par1 type</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Polarity">
-        <rdfs:label xml:lang="en">Polarity</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#involves">
-        <rdfs:label xml:lang="en">involves</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantIndividual">
-        <rdfs:label xml:lang="en">relevant individual</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#January">
         <rdfs:label xml:lang="en">January</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#PropertyRelation">
-        <rdfs:label xml:lang="en">PropertyRelation</rdfs:label>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantIndividual">
+        <rdfs:label xml:lang="en">relevant individual</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#ResourceSituation">
@@ -1345,10 +1335,6 @@
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Sentence">
         <rdfs:label xml:lang="en">Sentence</rdfs:label>
         <rdfs:comment xml:lang="en">STO sentence may be an attribute of both a DUL physical object or a DUL social object.</rdfs:comment>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#RelevantIndividual">
-        <rdfs:label xml:lang="en">Relevant individual</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
 </rdf:RDF>
