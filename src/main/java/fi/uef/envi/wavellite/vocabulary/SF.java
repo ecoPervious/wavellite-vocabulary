@@ -29,7 +29,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 public class SF {
 
 	/** http://www.opengis.net/ont/sf */
-	public static final String ns = "	http://www.opengis.net/ont/sf";
+	public static final String ns = "http://www.opengis.net/ont/sf";
 	
 	/** http://www.opengis.net/ont/sf#Geometry */
 	public static final String Geometry = _("Geometry");

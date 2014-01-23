@@ -230,7 +230,6 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SpatialRegion">
         <rdfs:label xml:lang="en">Spatial region</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation"/>
-        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
