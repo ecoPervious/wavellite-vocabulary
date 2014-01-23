@@ -87,16 +87,6 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#Entity">
         <rdfs:label xml:lang="en">Entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Object"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
         <rdfs:comment xml:lang="en">Wavellite entities may be DUL objects, DUL abstracts, DUL information entities, or STO objects. Thus, we model Wavellite entity as a subclass of DUL entity.</rdfs:comment>
     </owl:Class>
@@ -202,8 +192,8 @@
 
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation">
         <rdfs:label xml:lang="en">Sensor observation</rdfs:label>
-        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
         <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
         <rdfs:comment>http://envi.uef.fi/wavellite/ontology/entity</rdfs:comment>
         <rdfs:comment xml:lang="en">A Wavellite sensor observation is equivalent to a SSN observation, and is, thus, a DUL situation. The entity is defined in Wavellite in order to distinguish it from QB (dataset) observations.</rdfs:comment>
@@ -290,12 +280,6 @@
     
 
 
-    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
-
-    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
-    
-
-
     <!-- http://purl.org/linked-data/cube#Observation -->
 
     <rdf:Description rdf:about="http://purl.org/linked-data/cube#Observation"/>
@@ -308,8 +292,6 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <rdfs:comment xml:lang="en">Following the modelling of SSN observations as DUL situations, we model STO situations as DUL situations. Hence, a STO situation is &quot;a view, consistent with a description, on a set of entities.&quot;</rdfs:comment>
     </rdf:Description>
-    
-
 </rdf:RDF>
 
 
