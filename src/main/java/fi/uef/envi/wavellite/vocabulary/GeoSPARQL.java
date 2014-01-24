@@ -31,6 +31,9 @@ public class GeoSPARQL {
 	/** http://www.opengis.net/ont/geosparql */
 	public static final String ns = "http://www.opengis.net/ont/geosparql";
 	
+	/** http://www.opengis.net/ont/geosparql#Feature **/
+	public static final String Feature = _("Feature");
+	
 	/** http://www.opengis.net/ont/geosparql#hasGeometry **/
 	public static final String hasGeometry = _("hasGeometry");
 	

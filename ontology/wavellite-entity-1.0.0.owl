@@ -132,7 +132,7 @@
         <rdfs:label xml:lang="en">Measurement value</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
-        <rdfs:comment xml:lang="en">The value of a measurement result.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The value of a measurement result modelled akin SSN observation value.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
@@ -208,8 +208,8 @@
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#Entity"/>
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Location"/>
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:comment xml:lang="en">Intuitively, a spatial place, say Helsinki, is a GeoSPARQL feature (and a SSN feature of interest). It is also clear that a spatial place is an object that exists. It is perhaps less clear why a spatial region is a feature, and not a DUL region, i.e. why a spatial region is also an object and not an abstract. This has practical reasons, one being that GeoSPARQL models things that have a geometry as being features (and, thus, features of interest) which can be either objects or events, but not abstracts. Thus, a spatial region is, just like a spatial place, is a physical location. The spatial region has an associated geometry, which is modelled as a DUL region. Spatial location is modelled as a STO location (attribute) in order to allow for spatial locations to be objects in infons.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
-        <rdfs:comment xml:lang="en">Spatial location is modelled as a STO attribute in order to meet the semantics of STO as spatial locations are objects in infons.</rdfs:comment>
     </owl:Class>
     
 
@@ -219,7 +219,9 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SpatialPlace">
         <rdfs:label xml:lang="en">Spatial place</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Spatial place is modelled as a DUL place (a social object). It is a location in a generic sense, such as &quot;Helsinki&quot;. Spatial places have no associated GeoSPARQL geometry.</rdfs:comment>
     </owl:Class>
     
 
@@ -229,6 +231,8 @@
     <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SpatialRegion">
         <rdfs:label xml:lang="en">Spatial region</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SpatialLocation"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace"/>
+        <rdfs:comment xml:lang="en">A spatial region is modelled as a physical place, thus as a physical object. A spatial region is a reference to an object that is located in space and has a well defined spatial extent, modelled as GeoSPARQL geometry.</rdfs:comment>
         <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/entity</rdfs:isDefinedBy>
     </owl:Class>
     
