@@ -32,6 +32,9 @@ public class Time {
 
 	/** http://www.w3.org/2006/time#Instant **/
 	public static final String Instant = _("Instant");
+	
+	/** http://www.w3.org/2006/time#Interval **/
+	public static final String Interval = _("Interval");
 
 	/** http://www.w3.org/2006/time#DateTimeInterval **/
 	public static final String DateTimeInterval = _("DateTimeInterval");
@@ -62,6 +65,7 @@ public class Time {
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
 		public static final URI Instant = _uri(Time.Instant);
+		public static final URI Interval = _uri(Time.Interval);
 		public static final URI DateTimeInterval = _uri(Time.DateTimeInterval);
 		public static final URI inXSDDateTime = _uri(Time.inXSDDateTime);
 		public static final URI hasBeginning = _uri(Time.hasBeginning);
