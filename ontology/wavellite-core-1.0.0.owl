@@ -70,16 +70,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttribute -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttribute">
-        <rdfs:label xml:lang="en">has attribute</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion"/>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue">
@@ -511,17 +501,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#attributeValue -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#attributeValue">
-        <rdfs:label xml:lang="en">The STO datatype property that relates a STO Value with an XSD datatype. Because STO Value is a DUL Region this property is a sub property of DUL &apos;has region data value&apos;.</rdfs:label>
-        <rdfs:label xml:lang="en">attribute value</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#certainty -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#certainty">
@@ -544,6 +523,14 @@
     <!-- http://www.opengis.net/ont/geosparql#dimension -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#dimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasSerialization">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
     </rdf:Description>
     
@@ -958,24 +945,6 @@
     
 
 
-    <!-- http://vistology.com/ont/2008/STO/STO.owl#Value -->
-
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Value">
-        <rdfs:label xml:lang="en">Value</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Place"/>
-                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A STO value relates via STO datatype property attributeValue to the actual value. STO values may be DUL regions (e.g. a time interval as an attribute of a relevant individual) or DUL places (to allow Wavellite spatial places to be attributes or relevant individuals; e.g. a storm in a situation may have a spatial place, such as Helsinki).</rdfs:comment>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    
-
-
     <!-- http://vistology.com/ont/2008/STO/STO.owl#Velocity -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Velocity">
@@ -1099,8 +1068,8 @@
     <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity">
         <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
-        <rdfs:comment xml:lang="en">OWL-Time temporal enties are modelled as DUL time intervals, as we consider both time instants and time intervals to be DUL time intervals, meaning that a OWL-Time instant is a DUL time interval with coinciding start and end time.</rdfs:comment>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">OWL-Time temporal enties are modelled as DUL time intervals; hence as DUL regions. We consider both time OWL-Time instant and OWL-Time interval to be DUL time intervals, meaning that an instant is a DUL time interval with coinciding start and end time.</rdfs:comment>
     </rdf:Description>
     
 
@@ -1138,12 +1107,12 @@
         <rdfs:label xml:lang="en">focal relation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#impliedByRule">
-        <rdfs:label xml:lang="en">implied by rule</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
         <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#impliedByRule">
+        <rdfs:label xml:lang="en">implied by rule</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfWeek">
@@ -1161,6 +1130,11 @@
     <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:label xml:lang="en">Instant</rdfs:label>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Value">
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+        <rdfs:comment xml:lang="en">A STO value relates via STO datatype property attributeValue to the actual value. STO values may be DUL regions (e.g. a time interval), DUL object (e.g. a spatial place), DUL qualities (e.g. a SSN property).</rdfs:comment>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor3Inverse">
         <rdfs:label xml:lang="en">anchor3 inverse</rdfs:label>
@@ -1182,6 +1156,10 @@
         <rdfs:label xml:lang="en">relation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttribute">
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteredBy">
         <rdfs:label xml:lang="en">uttered by</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
@@ -1195,6 +1173,11 @@
         <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
         <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#attributeValue">
+        <rdfs:label xml:lang="en">The STO datatype property that relates a STO Value with an XSD datatype. Because STO Value is a DUL Region this property is a sub property of DUL &apos;has region data value&apos;.</rdfs:label>
+        <rdfs:label xml:lang="en">attribute value</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
         <rdfs:label xml:lang="en">par1 type</rdfs:label>
@@ -1232,7 +1215,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Attribute">
         <rdfs:label xml:lang="en">Attribute</rdfs:label>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utterance">
@@ -1320,13 +1302,13 @@
         <rdfs:label xml:lang="en">dimensionality</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#January">
-        <rdfs:label xml:lang="en">January</rdfs:label>
-        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#relevantIndividual">
         <rdfs:label xml:lang="en">relevant individual</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#January">
+        <rdfs:label xml:lang="en">January</rdfs:label>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#ResourceSituation">
         <rdfs:label xml:lang="en">Resource situation</rdfs:label>
