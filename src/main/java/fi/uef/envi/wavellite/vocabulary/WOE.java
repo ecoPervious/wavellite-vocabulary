@@ -72,6 +72,9 @@ public class WOE {
 	
 	/** http://envi.uef.fi/wavellite/ontology/entity#ComponentPropertyValue */
 	public static final String ComponentPropertyValue = _("ComponentPropertyValue");
+	
+	/** http://envi.uef.fi/wavellite/ontology/entity#observationResultLocation */
+	public static final String observationResultLocation = _("observationResultLocation");
 
 	public static class asURI {
 
@@ -85,6 +88,7 @@ public class WOE {
 		public static final URI SpatialPlace = _uri(WOE.SpatialPlace);
 		public static final URI SpatialRegion = _uri(WOE.SpatialRegion);
 		public static final URI DatasetObservation = _uri(WOE.DatasetObservation);
+		public static final URI observationResultLocation = _uri(WOE.observationResultLocation);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);

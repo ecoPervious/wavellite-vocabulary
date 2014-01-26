@@ -501,6 +501,17 @@
     
 
 
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#attributeValue -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#attributeValue">
+        <rdfs:label xml:lang="en">The STO datatype property that relates a STO Value with an XSD datatype. Because STO Value is a DUL Region this property is a sub property of DUL &apos;has region data value&apos;.</rdfs:label>
+        <rdfs:label xml:lang="en">attribute value</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </rdf:Description>
+    
+
+
     <!-- http://vistology.com/ont/2008/STO/STO.owl#certainty -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#certainty">
@@ -759,6 +770,15 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation">
+        <owl:disjointWith rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+        <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Output -->
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Output">
@@ -836,6 +856,14 @@
 
     <rdf:Description rdf:about="http://purl.org/linked-data/cube#ComponentSet">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#Observation -->
+
+    <rdf:Description rdf:about="http://purl.org/linked-data/cube#Observation">
+        <owl:disjointWith rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
     </rdf:Description>
     
 
@@ -1134,12 +1162,12 @@
         <rdfs:label xml:lang="en">focal relation</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
-        <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#impliedByRule">
         <rdfs:label xml:lang="en">implied by rule</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#anchor2Inverse">
+        <rdfs:label xml:lang="en">anchor2 inverse</rdfs:label>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfWeek">
@@ -1195,11 +1223,6 @@
         <rdfs:label xml:lang="en">DateTime interval</rdfs:label>
         <rdfs:comment xml:lang="en">The difference between OWL-Time proper interval and OWL-Time date time interval is that a date time interval stretches over an OWL-Time temporal unit (e.g. unitDay, unitHour). Hence, &quot;May 8&quot; is a date time interval while &quot;1:30 pm May 8 till 1:30 pm May 9&quot; is not (and is, thus, a proper interval). Only date time intervals and instants can have a OWL-Time date time description.</rdfs:comment>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#attributeValue">
-        <rdfs:label xml:lang="en">The STO datatype property that relates a STO Value with an XSD datatype. Because STO Value is a DUL Region this property is a sub property of DUL &apos;has region data value&apos;.</rdfs:label>
-        <rdfs:label xml:lang="en">attribute value</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#par1Type">
         <rdfs:label xml:lang="en">par1 type</rdfs:label>
