@@ -61,15 +61,6 @@ public class WOE {
 	/** http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult */
 	public static final String MeasurementResult = _("MeasurementResult");
 
-	/** http://envi.uef.fi/wavellite/ontology/entity#Sensor */
-	public static final String Sensor = _("Sensor");
-
-	/** http://envi.uef.fi/wavellite/ontology/entity#Feature */
-	public static final String Feature = _("Feature");
-
-	/** http://envi.uef.fi/wavellite/ontology/entity#Property */
-	public static final String Property = _("Property");
-
 	/** http://envi.uef.fi/wavellite/ontology/entity#SensorObservation */
 	public static final String SensorObservation = _("SensorObservation");
 
@@ -86,9 +77,6 @@ public class WOE {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
-		public static final URI Sensor = _uri(WOE.Sensor);
-		public static final URI Property = _uri(WOE.Property);
-		public static final URI Feature = _uri(WOE.Feature);
 		public static final URI SensorObservation = _uri(WOE.SensorObservation);
 		public static final URI TemporalLocation = _uri(WOE.TemporalLocation);
 		public static final URI TimePoint = _uri(WOE.TimePoint);

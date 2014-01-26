@@ -746,6 +746,7 @@
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
         <owl:equivalentClass rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Individual"/>
     </rdf:Description>
     
 
@@ -762,6 +763,22 @@
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Output">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Individual"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
+        <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Individual"/>
     </rdf:Description>
     
 
@@ -867,6 +884,16 @@
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Event">
         <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- http://vistology.com/ont/2008/STO/STO.owl#Individual -->
+
+    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Individual">
+        <rdfs:label xml:lang="en">Individual</rdfs:label>
+        <rdfs:comment xml:lang="en">A STO Individual may be a DUL physical object or a DUL social object.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     
@@ -1162,11 +1189,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#utteredBy">
         <rdfs:label xml:lang="en">uttered by</rdfs:label>
-        <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Individual">
-        <rdfs:label xml:lang="en">Individual</rdfs:label>
-        <rdfs:comment xml:lang="en">A STO Individual may be a DUL physical object or a DUL social object.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeInterval">

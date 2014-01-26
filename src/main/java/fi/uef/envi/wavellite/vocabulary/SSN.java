@@ -89,13 +89,16 @@ public class SSN {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
+		public static final URI Sensor = _uri(SSN.Sensor);
+		public static final URI Property = _uri(SSN.Property);
+		public static final URI Feature = _uri(SSN.FeatureOfInterest);
+		public static final URI SensorOutput = _uri(SSN.SensorOutput);
+		public static final URI ObservationValue = _uri(SSN.ObservationValue);
 		public static final URI observedBy = _uri(SSN.observedBy);
 		public static final URI observedProperty = _uri(SSN.observedProperty);
 		public static final URI featureOfInterest = _uri(SSN.featureOfInterest);
 		public static final URI observationResult = _uri(SSN.observationResult);
 		public static final URI observationResultTime = _uri(SSN.observationResultTime);
-		public static final URI SensorOutput = _uri(SSN.SensorOutput);
-		public static final URI ObservationValue = _uri(SSN.ObservationValue);
 		public static final URI hasValue = _uri(SSN.hasValue);
 
 		private static URI _uri(String s) {
