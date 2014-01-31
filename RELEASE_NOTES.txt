@@ -1,6 +1,8 @@
 0.1.1 Changes (YYYY-MM-DD)
 --------------------------
 
+* ADDED: New QB terms for data structure definition
+
 0.1.0 Changes (2014-01-28)
 --------------------------
 

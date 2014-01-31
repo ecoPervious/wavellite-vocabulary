@@ -35,7 +35,7 @@ public class QB {
 
 	/** http://purl.org/linked-data/cube#DataStructureDefinition */
 	public static final String DataStructureDefinition = _("DataStructureDefinition");
-	
+
 	/** http://purl.org/linked-data/cube#ComponentSpecification */
 	public static final String ComponentSpecification = _("ComponentSpecification");
 
@@ -56,15 +56,30 @@ public class QB {
 
 	/** http://purl.org/linked-data/cube#dataSet */
 	public static final String dataSet = _("dataSet");
-	
+
 	/** http://purl.org/linked-data/cube#component */
 	public static final String component = _("component");
-	
+
 	/** http://purl.org/linked-data/cube#componentProperty */
 	public static final String componentProperty = _("componentProperty");
-	
+
 	/** http://purl.org/linked-data/cube#structure */
 	public static final String structure = _("structure");
+
+	/** http://purl.org/linked-data/cube#dimension */
+	public static final String dimension = _("dimension");
+
+	/** http://purl.org/linked-data/cube#attribute */
+	public static final String attribute = _("attribute");
+
+	/** http://purl.org/linked-data/cube#measure */
+	public static final String measure = _("measure");
+
+	/** http://purl.org/linked-data/cube#order */
+	public static final String order = _("order");
+
+	/** http://purl.org/linked-data/cube#componentRequired */
+	public static final String componentRequired = _("componentRequired");
 
 	public static class asURI {
 
@@ -82,6 +97,11 @@ public class QB {
 		public static final URI component = _uri(QB.component);
 		public static final URI componentProperty = _uri(QB.componentProperty);
 		public static final URI structure = _uri(QB.structure);
+		public static final URI dimension = _uri(QB.dimension);
+		public static final URI attribute = _uri(QB.attribute);
+		public static final URI measure = _uri(QB.measure);
+		public static final URI order = _uri(QB.order);
+		public static final URI componentRequired = _uri(QB.componentRequired);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
