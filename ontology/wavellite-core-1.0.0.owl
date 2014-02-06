@@ -105,10 +105,21 @@
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#ehDisjoint -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehDisjoint">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfDisjoint"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehEquals">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8eq"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfEquals"/>
     </rdf:Description>
     
 
@@ -126,6 +137,8 @@
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehMeet">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasCommonBoundary"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfTouches"/>
     </rdf:Description>
     
 
@@ -135,6 +148,8 @@
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehOverlap">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfOverlaps"/>
     </rdf:Description>
     
 
@@ -147,11 +162,20 @@
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#rcc8dc -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8dc">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfDisjoint"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ec">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasCommonBoundary"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfTouches"/>
     </rdf:Description>
     
 
@@ -160,6 +184,7 @@
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8eq">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfEquals"/>
     </rdf:Description>
     
 
@@ -185,6 +210,7 @@
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8po">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#overlaps"/>
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfOverlaps"/>
     </rdf:Description>
     
 
@@ -218,6 +244,12 @@
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfCrosses">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#nearTo"/>
     </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfDisjoint -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfDisjoint"/>
     
 
 
