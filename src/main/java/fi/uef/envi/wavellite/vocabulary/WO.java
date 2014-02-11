@@ -24,7 +24,7 @@ package fi.uef.envi.wavellite.vocabulary;
 
 public class WO {
 
-	/** http://envi.uef.fi/wavellite/wo */
-	public static final String ns = "http://envi.uef.fi/wavellite/wo";
+	/** http://envi.uef.fi/wavellite/ontology */
+	public static final String ns = "http://envi.uef.fi/wavellite/ontology";
 	
 }
