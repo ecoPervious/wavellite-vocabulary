@@ -40,8 +40,14 @@ public class GeoSPARQL {
 	/** http://www.opengis.net/ont/geosparql#wktLiteral **/
 	public static final String wktLiteral = _("wktLiteral");
 	
+	/** http://www.opengis.net/ont/geosparql#gmlLiteral **/
+	public static final String gmlLiteral = _("gmlLiteral");
+	
 	/** http://www.opengis.net/ont/geosparql#asWKT **/
 	public static final String asWKT = _("asWKT");
+	
+	/** http://www.opengis.net/ont/geosparql#asGML **/
+	public static final String asGML = _("asGML");
 	
 	public static final class asURI {
 
@@ -49,7 +55,9 @@ public class GeoSPARQL {
 
 		public static final URI hasGeometry = _uri(GeoSPARQL.hasGeometry);
 		public static final URI wktLiteral = _uri(GeoSPARQL.wktLiteral);
+		public static final URI gmlLiteral = _uri(GeoSPARQL.gmlLiteral);
 		public static final URI asWKT = _uri(GeoSPARQL.asWKT);
+		public static final URI asGML = _uri(GeoSPARQL.asGML);
 		
 		private static URI _uri(String s) {
 			return f.createURI(s);
