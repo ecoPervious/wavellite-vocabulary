@@ -3,6 +3,7 @@
 
 * ADDED: New QB terms for data structure definition
 * FIXED: WO namespace was still /wavellite/wo; fixed to /wavellite/ontology
+* FIXED: SSN.asURI.Feature -> SSN.asURI.FeatureOfInterest
 
 0.1.0 Changes (2014-01-28)
 --------------------------

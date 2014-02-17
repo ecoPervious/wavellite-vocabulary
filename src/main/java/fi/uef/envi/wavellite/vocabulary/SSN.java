@@ -91,7 +91,7 @@ public class SSN {
 
 		public static final URI Sensor = _uri(SSN.Sensor);
 		public static final URI Property = _uri(SSN.Property);
-		public static final URI Feature = _uri(SSN.FeatureOfInterest);
+		public static final URI FeatureOfInterest = _uri(SSN.FeatureOfInterest);
 		public static final URI SensorOutput = _uri(SSN.SensorOutput);
 		public static final URI ObservationValue = _uri(SSN.ObservationValue);
 		public static final URI observedBy = _uri(SSN.observedBy);
