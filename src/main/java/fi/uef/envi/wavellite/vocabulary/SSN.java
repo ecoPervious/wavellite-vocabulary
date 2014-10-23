@@ -33,6 +33,9 @@ public class SSN {
 
 	/** http://purl.oclc.org/NET/ssnx/ssn#Sensor */
 	public static final String Sensor = _("Sensor");
+	
+	/** http://purl.oclc.org/NET/ssnx/ssn#Sensing */
+	public static final String Sensing = _("Sensing");
 
 	/** http://purl.oclc.org/NET/ssnx/ssn#SensingDevice */
 	public static final String SensingDevice = _("SensingDevice");
@@ -90,6 +93,7 @@ public class SSN {
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
 		public static final URI Sensor = _uri(SSN.Sensor);
+		public static final URI Sensing = _uri(SSN.Sensing);
 		public static final URI Property = _uri(SSN.Property);
 		public static final URI FeatureOfInterest = _uri(SSN.FeatureOfInterest);
 		public static final URI SensorOutput = _uri(SSN.SensorOutput);

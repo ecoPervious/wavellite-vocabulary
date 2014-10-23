@@ -47,6 +47,22 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#implements -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociateFor"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#observedBy -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    </rdf:Description>
+    
+
+
     <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue -->
 
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue">
@@ -796,10 +812,19 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensing -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Individual"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     </rdf:Description>
     
 
