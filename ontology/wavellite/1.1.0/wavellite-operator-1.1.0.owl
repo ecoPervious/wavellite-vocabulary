@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://envi.uef.fi/wavellite/ontology/operator#"
+     xml:base="http://envi.uef.fi/wavellite/ontology/operator"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://envi.uef.fi/wavellite/ontology/operator">
+        <rdfs:label xml:lang="en">Wavellite operator ontology</rdfs:label>
+        <terms:created rdf:datatype="&xsd;date">2014-10-23</terms:created>
+	<owl:versionInfo>1.1.0</owl:versionInfo>
+        <terms:creator>Markus Stocker (University of Eastern Finland)</terms:creator>
+        <rdfs:comment xml:lang="en">The Wavellite operator ontology. It builds on the Wavellite entity ontology and defines all Wavellite operators, i.e. some of the computational agents of the Wavellite architecture, namely the operators (translators, processors, and extractors).</rdfs:comment>
+        <owl:imports rdf:resource="http://envi.uef.fi/wavellite/ontology/entity"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#hasExtracted -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/operator#hasExtracted">
+        <rdfs:label xml:lang="en">has extracted</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Wavellite object property that relates extractors with extracted Wavellite entities, specifically situations.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Extractor"/>
+        <rdfs:range rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#hasProcessed -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/operator#hasProcessed">
+        <rdfs:label xml:lang="en">has processed</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Wavellite object property that relates processors with processed Wavellite entities, specifically sensor observations, dataset observations, or situations.</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Processor"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                    <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#hasTranslated -->
+
+    <owl:ObjectProperty rdf:about="http://envi.uef.fi/wavellite/ontology/operator#hasTranslated">
+        <rdfs:label xml:lang="en">has translated</rdfs:label>
+        <rdfs:comment xml:lang="en">Wavellite object property that relates translators with translated Wavellite entities, specifically either measurement results or sensor observations.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Translator"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+                    <rdf:Description rdf:about="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#DatasetObservationProcessor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#DatasetObservationProcessor">
+        <rdfs:label xml:lang="en">Dataset observation processor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Processor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#hasProcessed"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#DatasetObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">A Wavellite dataset observation processor processes dataset observations into dataset observations.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#Extractor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#Extractor">
+        <rdfs:label xml:lang="en">Extractor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Processor"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Translator"/>
+        <rdfs:comment xml:lang="en">Wavellite extractors are operators that extract Wavellite entities from Wavellite entities. Specifically, the architecture includes extractors of situations from dataset observations. Implementations are for various methods, including classification and complex event processing.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#MeasurementResultTranslator -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#MeasurementResultTranslator">
+        <rdfs:label xml:lang="en">Measurement result translator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Translator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#hasTranslated"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#MeasurementResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#SensorObservationTranslator"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A Wavellite measurement result translator translates measurement results into sensor observations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#Operator -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#Operator">
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAgent"/>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A Wavellite operator is a computational agent. According to DUL, &quot;a computational agent can be considered as a PhysicalAgent that realizes a certain class of algorithms (that can be considered as instances of InformationObject) that allow to obtain some behaviors that are considered typical of agents in general.&quot; Hence, we model Wavellite operators as DUL physical agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#Processor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#Processor">
+        <rdfs:label xml:lang="en">Processor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+        <owl:disjointWith rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Translator"/>
+        <rdfs:comment xml:lang="en">Wavellite processors are operators that process Wavellite entities into Wavellite entities. Specifically, the architecture includes processors sensor observations, dataset observations, and situations. Mostly, processors are meant for dataset observations. However, processors may be useful also for sensor observations or situations, e.g. to further enrich them with information.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#SensorObservationTranslator -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#SensorObservationTranslator">
+        <rdfs:label xml:lang="en">Sensor observation translator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Translator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#hasTranslated"/>
+                <owl:allValuesFrom rdf:resource="http://envi.uef.fi/wavellite/ontology/entity#SensorObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Wavellite sensor observation translator translates sensor observations into dataset observations.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#SituationExtractor -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#SituationExtractor">
+        <rdfs:label xml:lang="en">Situation extractor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Extractor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#hasExtracted"/>
+                <owl:allValuesFrom rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Wavellite situation extractor extracts situations from dataset observations.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#Translator -->
+
+    <owl:Class rdf:about="http://envi.uef.fi/wavellite/ontology/operator#Translator">
+        <rdfs:label xml:lang="en">Translator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#Operator"/>
+        <rdfs:comment xml:lang="en">Wavellite translators are operators that translate Wavellite entities into Wavellite entities. Specifically, the architecture includes translators for measurement results and for sensor observations.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#21ebf942-a0f7-47c3-91c3-d5bebd710fa3 -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#21ebf942-a0f7-47c3-91c3-d5bebd710fa3">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#SensorObservationTranslator"/>
+        <rdfs:label xml:lang="en">The base Wavellite sensor observation translator</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The base (default) implementation for a sensor observation translator in Wavellite.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#2561e068-7f67-4568-bea5-d70b27b59cf4 -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#2561e068-7f67-4568-bea5-d70b27b59cf4">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#DatasetObservationProcessor"/>
+        <rdfs:label xml:lang="en">The aggregate Wavellite dataset observation processor</rdfs:label>
+        <rdfs:comment xml:lang="en">This operator aggregates a set of dataset observations according to a given aggregation function and aggregation period.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#2c005cfb-a0c3-403f-a11a-fecad6ceb83a -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#2c005cfb-a0c3-403f-a11a-fecad6ceb83a">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#DatasetObservationProcessor"/>
+        <rdfs:label xml:lang="en">The merge Wavellite dataset observation processor</rdfs:label>
+        <rdfs:comment xml:lang="en">This operator merges a set of dataset observations to a singleton dataset observation.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#575f901c-4e5c-4ff9-93db-b0bc6e759d49 -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#575f901c-4e5c-4ff9-93db-b0bc6e759d49">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#MeasurementResultTranslator"/>
+        <rdfs:label xml:lang="en">The base Wavellite measurement result translator</rdfs:label>
+        <rdfs:comment xml:lang="en">The base (default) implementation for a measurement result translator in Wavellite.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#725e72c0-cb3a-4e4f-95b5-17bb8210df67 -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#725e72c0-cb3a-4e4f-95b5-17bb8210df67">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#SituationExtractor"/>
+        <rdfs:label xml:lang="en">The WEKA Wavellite situation extractor</rdfs:label>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">This operator uses WEKA to extract situations from datasets by dataset observation classification.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://envi.uef.fi/wavellite/ontology/operator#b95ce68c-3bae-43ef-acb4-9af404f01c3c -->
+
+    <owl:NamedIndividual rdf:about="http://envi.uef.fi/wavellite/ontology/operator#b95ce68c-3bae-43ef-acb4-9af404f01c3c">
+        <rdf:type rdf:resource="http://envi.uef.fi/wavellite/ontology/operator#SituationExtractor"/>
+        <rdfs:label xml:lang="en">The Esper Wavellite situation extractor</rdfs:label>
+        <rdfs:comment xml:lang="en">This operator uses Esper to extract situations from datasets.</rdfs:comment>
+        <rdfs:isDefinedBy>http://envi.uef.fi/wavellite/ontology/operator</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
