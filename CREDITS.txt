@@ -21,3 +21,26 @@ The development of this software was made possible using the following component
 OpenRDF Sesame (2.7.7):
 	http://www.openrdf.org/
 	BSD 3-Clause License
+	
+The Semantic Sensor Network ontology
+	http://purl.oclc.org/NET/ssnx/ssn
+	
+The RDF Date Cube Vocabulary
+	http://purl.org/linked-data/cube
+	
+The Situation Theory Ontology
+	http://vistology.com/ont/2008/STO/STO.owl
+
+GeoSPARQL
+	http://www.opengis.net/ont/geosparql
+	
+OWL-Time
+	http://www.w3.org/2006/time
+	
+The PROV ontology
+	http://www.w3.org/ns/prov
+	
+The DOLCE+DnS Ultralite ontology
+	http://www.loa-cnr.it/ontologies/DUL.owl
+	
+Other imported ontologies
