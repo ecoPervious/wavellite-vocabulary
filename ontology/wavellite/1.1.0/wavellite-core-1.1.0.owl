@@ -52,7 +52,6 @@
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociateFor"/>
     </rdf:Description>
-    
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#observedBy -->
@@ -60,7 +59,6 @@
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
     </rdf:Description>
-    
 
 
     <!-- http://vistology.com/ont/2008/STO/STO.owl#hasAttributeValue -->
@@ -515,6 +513,15 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -817,14 +824,13 @@
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensing">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     </rdf:Description>
-    
 
 
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
         <rdfs:subClassOf rdf:resource="http://vistology.com/ont/2008/STO/STO.owl#Individual"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+       <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     </rdf:Description>
     
 
@@ -958,7 +964,7 @@
     <rdf:Description rdf:about="http://vistology.com/ont/2008/STO/STO.owl#Object">
         <rdfs:label xml:lang="en">Object</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/> 
         <rdfs:comment xml:lang="en">A STO object can be a DUL object, a DUL abstract, or a DUL event. These classes are disjoint; hence, the chosen modelling. A STO object may be a DUL event because a STO individual may be a DUL event.</rdfs:comment>
         <rdfs:isDefinedBy>http://vistology.com/ont/2008/STO/STO.owl</rdfs:isDefinedBy>
     </rdf:Description>
@@ -1043,7 +1049,6 @@
     <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Agent">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     </rdf:Description>
-    
 
 
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Collection -->
@@ -1051,7 +1056,6 @@
     <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Collection">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Collection"/>
     </rdf:Description>
-    
 
 
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Concept -->
@@ -1063,36 +1067,21 @@
 
 
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#NaturalPerson -->
-
+    
     <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#NaturalPerson">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Person"/>
     </rdf:Description>
-    
-
-
-    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Object -->
-
-    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Object">
-        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    </rdf:Description>
-    
 
 
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Organization -->
-
     <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Organization">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Organization"/>
     </rdf:Description>
-    
-
 
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Plan -->
-
     <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Plan">
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Plan"/>
     </rdf:Description>
-    
-
 
     <!-- http://www.opengis.net/ont/geosparql#Feature -->
 
@@ -1227,7 +1216,6 @@
 
 (source: http://www.w3.org/2001/sw/bestpractices/wnet/dlp3941_daml.html#activity)</rdfs:comment>
     </rdf:Description>
-    
 
 
     <!-- http://www.w3.org/ns/prov#Agent -->
@@ -1262,7 +1250,6 @@
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
         <rdfs:comment>influence is the capacity to have an effect; it is a capacity. in dolce capacities are a type of individual qualities.</rdfs:comment>
     </rdf:Description>
-    
 
 
     <!-- http://www.w3.org/ns/prov#InstantaneousEvent -->
@@ -1271,23 +1258,15 @@
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Event"/>
     </rdf:Description>
     
-
-
     <!-- http://www.w3.org/ns/prov#KeyEntityPair -->
-
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#KeyEntityPair">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
     </rdf:Description>
-    
-
 
     <!-- http://www.w3.org/ns/prov#Location -->
-
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#Location">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
     </rdf:Description>
-    
-
 
     <!-- http://www.w3.org/ns/prov#Organization -->
 
@@ -1308,20 +1287,15 @@
 
 
     <!-- http://www.w3.org/ns/prov#Role -->
-
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#Role">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Role"/>
     </rdf:Description>
-    
 
 
     <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
-
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalAgent"/>
     </rdf:Description>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
