@@ -63,6 +63,9 @@ public class PROV {
 	/** http://www.w3.org/ns/prov#wasAssociatedWith */
 	public static final String wasAssociatedWith = _("wasAssociatedWith");
 	
+	/** http://www.w3.org/ns/prov#wasAssociateFor */
+	public static final String wasAssociateFor = _("wasAssociateFor");
+	
 	/** http://www.w3.org/ns/prov#actedOnBehalfOf */
 	public static final String actedOnBehalfOf = _("actedOnBehalfOf");
 	
@@ -81,6 +84,7 @@ public class PROV {
 		public static final URI wasInformedBy = _uri(PROV.wasInformedBy);
 		public static final URI startedAtTime = _uri(PROV.startedAtTime);
 		public static final URI wasAssociatedWith = _uri(PROV.wasAssociatedWith);
+		public static final URI wasAssociateFor = _uri(PROV.wasAssociateFor);
 		public static final URI actedOnBehalfOf = _uri(PROV.actedOnBehalfOf);
 
 		private static URI _uri(String s) {
