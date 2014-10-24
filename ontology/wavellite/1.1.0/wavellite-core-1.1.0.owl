@@ -824,6 +824,14 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensing -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
 
     <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">

@@ -33,7 +33,7 @@ public class SSN {
 
 	/** http://purl.oclc.org/NET/ssnx/ssn#Sensor */
 	public static final String Sensor = _("Sensor");
-	
+
 	/** http://purl.oclc.org/NET/ssnx/ssn#Sensing */
 	public static final String Sensing = _("Sensing");
 
@@ -85,6 +85,12 @@ public class SSN {
 	/** http://purl.oclc.org/NET/ssnx/ssn#observes */
 	public static final String observes = _("observes");
 
+	/**
+	 * http://purl.oclc.org/NET/ssnx/ssn#implements; called doesImplement here
+	 * because 'implements' is a Java key word
+	 */
+	public static final String doesImplement = _("implements");
+
 	/** http://purl.oclc.org/NET/ssnx/ssn#qualityOfObservation */
 	public static final String qualityOfObservation = _("qualityOfObservation");
 
@@ -104,6 +110,7 @@ public class SSN {
 		public static final URI observationResult = _uri(SSN.observationResult);
 		public static final URI observationResultTime = _uri(SSN.observationResultTime);
 		public static final URI hasValue = _uri(SSN.hasValue);
+		public static final URI doesImplement = _uri(SSN.doesImplement);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
