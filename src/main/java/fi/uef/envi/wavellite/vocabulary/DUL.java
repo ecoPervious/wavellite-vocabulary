@@ -56,6 +56,9 @@ public class DUL {
 	
 	/** http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation */
 	public static final String hasLocation = _("hasLocation");
+	
+	/** http://www.loa-cnr.it/ontologies/DUL.owl#includesEvent */
+	public static final String includesEvent = _("includesEvent");
 
 	public static final class asURI {
 
@@ -70,6 +73,7 @@ public class DUL {
 		public static final URI hasRegionDataValue = _uri(DUL.hasRegionDataValue);
 		public static final URI hasRegion = _uri(DUL.hasRegion);
 		public static final URI hasLocation = _uri(DUL.hasLocation);
+		public static final URI includesEvent = _uri(DUL.includesEvent);
 
 		private static URI _uri(String s) {
 			return f.createURI(s);
