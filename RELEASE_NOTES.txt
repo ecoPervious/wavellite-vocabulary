@@ -2,6 +2,7 @@
 --------------------------
 
 * ADDED: PROV-O vocabulary
+* ADDED: WOO.Operation
 
 0.1.1 Changes (2014-10-23)
 --------------------------

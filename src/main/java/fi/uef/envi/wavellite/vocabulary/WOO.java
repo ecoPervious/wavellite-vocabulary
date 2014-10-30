@@ -31,6 +31,9 @@ public class WOO {
 	/** http://envi.uef.fi/wavellite/ontology/operator */
 	public static final String ns = "http://envi.uef.fi/wavellite/ontology/operator";
 
+	/** http://envi.uef.fi/wavellite/ontology/operator#Operation */
+	public static final String Operation = _("Operation");
+	
 	/** http://envi.uef.fi/wavellite/ontology/operator#Operator */
 	public static final String Operator = _("Operator");
 
@@ -113,6 +116,7 @@ public class WOO {
 
 		private static final ValueFactory f = ValueFactoryImpl.getInstance();
 
+		public static final URI Operation = _uri(WOO.Operation);
 		public static final URI Operator = _uri(WOO.Operator);
 		public static final URI Translator = _uri(WOO.Translator);
 		public static final URI Processor = _uri(WOO.Processor);
